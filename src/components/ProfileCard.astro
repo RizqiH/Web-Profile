@@ -1,0 +1,223 @@
+---
+const profile = {
+  name: "Muhammad Rizqi Amanan Habibullah",
+  occupation: "Web Developer",
+  bio: "Passionate developer building scalable applications. I love coding, coffee, and open-source projects.",
+  skills: [
+    "JavaScript",
+    "ReactJS",
+    "NodeJS",
+    "AstroJS",
+    "NextJS",
+    "ExpressJS",
+    "Laravel",
+    "PHP",
+  ],
+  socialLinks: {
+    github: "https://github.com/johndoe",
+    linkedin: "https://linkedin.com/in/johndoe",
+  },
+  projects: [
+    {
+      title: "Website Desa",
+      description:
+        "Arus Bawah Creator adalah platform digital yang mendukung komunitas kreatif lokal, khususnya untuk pemuda di bidang teknologi informasi, dengan dokumentasi kegiatan dan ruang kolaborasi digital.",
+      link: "https://arusbawahcreator.vercel.app/",
+    },
+  ],
+};
+---
+
+<!-- Section paling atas dengan background putih penuh -->
+<section class="w-full transform animate-fade-in">
+  <!-- Gallery Cards with Group Hover -->
+  <div
+    class="relative flex justify-center items-center gap-10 mb-28 group transition-all duration-500"
+  >
+    <!-- Owl Image Card -->
+    <div
+      class="relative -mr-28 z-10 rounded-lg overflow-hidden shadow-lg transform animate-fade-in"
+    >
+      <img
+        src="assets/images/fotoku.jpg"
+        alt="Artistic owl close-up"
+        class="w-64 h-40 object-cover"
+      />
+    </div>
+
+    <!-- Person with Headphones Card -->
+    <div
+      class="relative z-20 -mb-40 rounded-lg overflow-hidden shadow-xl animate-fade-in"
+    >
+      <img
+        src="assets/images/bg.jpg"
+        alt="Person wearing headphones"
+        class="w-80 h-48 object-cover"
+      />
+    </div>
+
+    <!-- Mountain Landscape Card -->
+    <div
+      class="relative -ml-28 z-10 rounded-lg overflow-hidden shadow-lg transform animate-fade-in"
+    >
+      <img
+        src="assets/images/fotoku.jpg"
+        alt="Mountain peaks above clouds"
+        class="w-64 h-40 object-cover"
+      />
+    </div>
+  </div>
+
+  <!-- Text Section -->
+  <div
+    class="flex flex-col items-center gap-4 text-left text-base text-gray-600 max-w-xl mx-auto mt-6 md:mt-12 px-8 md:px-12 py-8 max-w-2xl mx-auto"
+  >
+    <!-- Section untuk judul di tengah -->
+    <div class="text-black flex flex-col items-center">
+      <h1 class="text-2xl tracking-tighter font-light lg:text-4xl text-black">
+        Rizqi
+      </h1>
+      <h2 class="text-2xl tracking-tighter font-light lg:text-4xl text-black">
+        Profile Website
+      </h2>
+    </div>
+
+    <!-- Section untuk paragraf dengan layout sejajar -->
+    <div class="flex flex-col lg:flex-row justify-center gap-4 mt-6">
+      <p class="max-w-lg">
+        This site contains information about me, my writings, opinions, and
+        mostly serves as personal documentation for when I am learning or
+        sharing something.
+      </p>
+      <p class="max-w-lg">
+        I am a passionate and meticulous computer science student with a strong
+        dedication to software development.
+      </p>
+    </div>
+  </div>
+  <div
+    class="flex flex-col items-center gap-4 text-left text-base text-gray-600 max-w-xl mx-auto mt-2 md:mt-1-0 px-8 md:px-12 py-8 max-w-2xl mx-auto"
+  >
+    <!-- Section Experience -->
+    <div class="text-black flex flex-col items">
+      <h1 class="text-2xl tracking-tighter font-light lg:text-4xl text-black">
+        Experience
+      </h1>
+    </div>
+
+    <!-- Section untuk paragraf dengan layout sejajar -->
+    <div class="flex flex-col lg:flex-row justify-center gap-4 mt-6">
+      <p class="max-w-lg">
+        I interned at a Mark Design company when I was still in SMK for 6 months
+        from 26 July 2022 - 30 December 2022 and I was there as a Fullstack
+        developer using NodeJS, ReactJS, ExpressJS, and NextJS.
+      </p>
+      <p class="max-w-lg">
+        and I was there also had time to do wifi maintenance in the company and
+        then also became a copywriter when I was an intern at Mark Design.
+      </p>
+    </div>
+  </div>
+
+  <div class="px-8 md:px-12 max-w-2xl mx-auto flex justify-center">
+    <div class="grid grid-cols-1 gap-px rounded-2xl overflow-hidden sm:mx-0">
+      <div
+        class="p-8 sm:p-10 flex items-center justify-center bg-white rounded-2xl"
+      >
+        <img
+          src="assets/images/logo.png"
+          alt="Descriptive alt text"
+          class="max-h-12 object-contain rounded-2xl"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Menambahkan jarak antar section -->
+<div class="mb-16"></div>
+
+<!-- Main Content with Overlay -->
+<div
+  class="relative z-10 bg-gray-100 bg-opacity-80 shadow-lg rounded-lg p-10 max-w-lg w-full mx-auto transform hover:shadow-2xl transition-shadow duration-500 animate-fade-in"
+>
+  <div class="text-center">
+    <!-- Profile Picture with Gradient Border -->
+    <div
+      class="relative w-28 h-28 mx-auto rounded-full overflow-hidden mb-4 border-2 border-transparent bg-gray-400 p-1"
+    >
+      <img
+        src="assets/images/fotoku.jpg"
+        alt="Profile Picture"
+        class="w-full h-full object-cover rounded-full border-2 border-white transform hover:scale-105 transition-transform duration-500"
+      />
+    </div>
+
+    <h1 class="text-3xl font-bold text-gray-900 mb-2">{profile.name}</h1>
+    <p class="text-lg text-gray-600 italic">{profile.occupation}</p>
+  </div>
+
+  <!-- Bio Section -->
+  <div class="mt-6 text-gray-800 text-center">
+    <h2 class="text-xl font-semibold text-gray-900 mb-3">Bio</h2>
+    <p class="text-gray-700 leading-relaxed text-base">{profile.bio}</p>
+  </div>
+
+  <!-- Skills Section -->
+  <div class="mt-6">
+    <h2 class="text-xl font-semibold text-gray-900 text-center mb-3">Skills</h2>
+    <ul class="flex flex-wrap gap-2 justify-center">
+      {
+        profile.skills.map((skill) => (
+          <li class="bg-gradient-to-r from-gray-200 to-gray-300 text-black rounded-full px-3 py-1 text-sm font-medium shadow  transition-transform transform hover:scale-105 duration-300">
+            {skill}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+
+  <!-- Projects Section -->
+  <div class="mt-8">
+    <h2 class="text-xl font-semibold text-gray-900 text-center mb-4">
+      My Projects
+    </h2>
+    <ul class="space-y-4">
+      {
+        profile.projects.map((project) => (
+          <li class="p-4 rounded-lg shadow hover:bg-white transition-colors duration-300">
+            <a
+              href={project.link}
+              class="text-lg font-semibold text-gray-900 hover:underline"
+            >
+              {project.title}
+            </a>
+            <p class="text-gray-700 mt-1">{project.description}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>
+
+<style>
+  /* Animasi Fade-In */
+  .animate-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Hover Animation for Grouped Images */
+  .group:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
+  }
+</style>
