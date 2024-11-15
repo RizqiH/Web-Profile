@@ -108,8 +108,9 @@
           </svg>
         </div>
         <h3 class="font-semibold text-lg text-gray-900">EMAIL</h3>
-        <a href="mailto:hello@theme.com" class="text-sky-500 text-sm underline"
-          >rizkiamanan@gmail.com</a
+        <a
+          href="mailto:rizkiamanan@gmail.com"
+          class="text-sky-500 text-sm underline">rizkiamanan@gmail.com</a
         >
       </div>
     </div>
@@ -119,27 +120,35 @@
       class="bg-sky-400 p-8 rounded-lg text-gray-100 relative z-0 mt-8 md:mt-12 max-w-xl mx-auto md:mx-0"
     >
       <h2 class="text-2xl sm:text-3xl font-bold mb-6">Contact Me</h2>
-      <form class="space-y-4">
+      <form
+        action="https://formspree.io/f/mzzbgqeb"
+        method="POST"
+        class="space-y-4"
+      >
         <input
           type="text"
+          name="name"
           placeholder="Enter your Name"
           class="w-full p-3 rounded-md bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
         />
         <input
           type="email"
+          name="email"
           placeholder="Enter a valid email address"
           class="w-full p-3 rounded-md bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
         />
         <textarea
           rows="4"
+          name="message"
           placeholder="Enter your message"
           class="w-full p-3 rounded-md bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
         ></textarea>
         <button
           type="submit"
           class="w-full py-2 rounded-md bg-gray-900 text-white font-semibold hover:bg-sky-600 transition-colors"
-          >SUBMIT</button
         >
+          SUBMIT
+        </button>
       </form>
     </div>
   </div>
