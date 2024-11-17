@@ -19,7 +19,7 @@
     "@types/express": "^5.0.0",
     "@types/node": "^22.9.0",
     "array-iterate": "^2.0.1",
-    "astro": "^4.16.7",
+    "astro": "^4.16.13",
     "autoprefixer": "^10.4.20",
     "body-parser": "^1.20.3",
     "chalk": "^5.0.1",
