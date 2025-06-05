@@ -1,16 +1,17 @@
 ---
-import Navbar from '../components/Navbar.astro';
-import AboutMe from '../components/AboutMe';
-import Footer from '../components/Footer.astro';
+import Navbar from '../components/Navbar.astro'
+import AboutMe from '../components/AboutMe'
+import Footer from '../components/Footer.astro'
 
-const name = "Muhammad Rizqi Amanan Habibulah";
-const bio = "I am a passionate software developer with a love for building scalable applications and exploring new technologies.";
+const name = 'Muhammad Rizqi Amanan Habibulah'
+const bio =
+  'I am a passionate software developer with a love for building scalable applications and exploring new technologies.'
 ---
 
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Me</title>
   </head>
   <body class="bg-gray-300">
@@ -21,6 +22,6 @@ const bio = "I am a passionate software developer with a love for building scala
         <AboutMe name={name} client:load />
       </section>
     </main>
-    <Footer/>
+    <Footer />
   </body>
 </html>

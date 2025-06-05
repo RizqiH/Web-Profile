@@ -11,50 +11,104 @@
         <div id="carousel" class="relative">
           <!-- Slide Images -->
           <div class="slides-container overflow-hidden relative">
-            <div class="slides-track flex transition-transform duration-300" id="slides-track">
+            <div
+              class="slides-track flex transition-transform duration-300"
+              id="slides-track"
+            >
               <div class="slide w-full flex-shrink-0">
-                <img src="../assets/images/p.png" alt="Project image" class="w-full h-auto" />
+                <img
+                  src="../assets/images/p.png"
+                  alt="Project image"
+                  class="w-full h-auto"
+                />
               </div>
               <div class="slide w-full flex-shrink-0">
-                <img src="../assets/images/logo.png" alt="Logo image" class="w-full h-auto" />
+                <img
+                  src="../assets/images/logo.png"
+                  alt="Logo image"
+                  class="w-full h-auto"
+                />
               </div>
               <div class="slide w-full flex-shrink-0">
-                <img src="../assets/images/logo.png" alt="Logo image" class="w-full h-auto" />
+                <img
+                  src="../assets/images/logo.png"
+                  alt="Logo image"
+                  class="w-full h-auto"
+                />
               </div>
               <div class="slide w-full flex-shrink-0">
-                <img src="../assets/images/logo.png" alt="Logo image" class="w-full h-auto" />
+                <img
+                  src="../assets/images/logo.png"
+                  alt="Logo image"
+                  class="w-full h-auto"
+                />
               </div>
               <div class="slide w-full flex-shrink-0">
-                <img src="../assets/images/logo.png" alt="Logo image" class="w-full h-auto" />
+                <img
+                  src="../assets/images/logo.png"
+                  alt="Logo image"
+                  class="w-full h-auto"
+                />
               </div>
             </div>
           </div>
-          
+
           <!-- Navigation Buttons -->
           <div class="flex justify-center mt-4 space-x-4">
-            <button id="prevBtn" class="bg-gray-300 hover:bg-zinc-200 focus:bg-zinc-50 rounded-lg inline-flex items-center text-center text-black p-2 ring-1 ring-zinc-300">
+            <button
+              id="prevBtn"
+              class="bg-gray-300 hover:bg-zinc-200 focus:bg-zinc-50 rounded-lg inline-flex items-center text-center text-black p-2 ring-1 ring-zinc-300"
+            >
               <span aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-3 w-3"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15 19l-7-7 7-7"></path>
                 </svg>
               </span>
               <span class="sr-only">Previous</span>
             </button>
-            
-            <button id="nextBtn" class="bg-gray-300 hover:bg-zinc-200 focus:bg-zinc-50 rounded-lg inline-flex items-center text-center text-black p-2 ring-1 ring-zinc-300">
+
+            <button
+              id="nextBtn"
+              class="bg-gray-300 hover:bg-zinc-200 focus:bg-zinc-50 rounded-lg inline-flex items-center text-center text-black p-2 ring-1 ring-zinc-300"
+            >
               <span aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-3 w-3"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"></path>
                 </svg>
               </span>
               <span class="sr-only">Next</span>
             </button>
           </div>
-          
+
           <!-- Indicator/Progress Bar -->
           <div class="flex mt-2 relative">
             <div class="w-full bg-gray-400 h-1 rounded-full">
-              <div id="progressBar" class="bg-blue-500 h-1 rounded-full" style="width: 20%;"></div>
+              <div
+                id="progressBar"
+                class="bg-blue-500 h-1 rounded-full"
+                style="width: 20%;"
+              >
+              </div>
             </div>
           </div>
         </div>
@@ -62,80 +116,80 @@
 
       <!-- JavaScript untuk carousel -->
       <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
           // Get necessary elements dengan null check
-          const track = document.getElementById('slides-track');
-          const prevBtn = document.getElementById('prevBtn');
-          const nextBtn = document.getElementById('nextBtn');
-          const progressBar = document.getElementById('progressBar');
-          
+          const track = document.getElementById('slides-track')
+          const prevBtn = document.getElementById('prevBtn')
+          const nextBtn = document.getElementById('nextBtn')
+          const progressBar = document.getElementById('progressBar')
+
           // Validasi elemen yang diperlukan
           if (!track || !prevBtn || !nextBtn || !progressBar) {
-            console.error('Satu atau lebih elemen carousel tidak ditemukan');
-            return; // Hentikan eksekusi jika ada elemen yang hilang
+            console.error('Satu atau lebih elemen carousel tidak ditemukan')
+            return // Hentikan eksekusi jika ada elemen yang hilang
           }
-          
+
           // Sekarang kita aman menggunakan elemen-elemen ini
-          const slides = track.querySelectorAll('.slide');
-          let currentIndex = 0;
-          const slideCount = slides.length;
-          
+          const slides = track.querySelectorAll('.slide')
+          let currentIndex = 0
+          const slideCount = slides.length
+
           // Set initial width of track (100% * number of slides)
-          track.style.width = `${slideCount * 100}%`;
-          
+          track.style.width = `${slideCount * 100}%`
+
           // Set each slide width evenly
-          slides.forEach(slide => {
+          slides.forEach((slide) => {
             if (slide instanceof HTMLElement) {
-              slide.style.width = `${100 / slideCount}%`;
+              slide.style.width = `${100 / slideCount}%`
             }
-          });
-          
+          })
+
           // Update progress bar
           function updateProgressBar() {
             if (progressBar instanceof HTMLElement) {
-              const progress = ((currentIndex + 1) / slideCount) * 100;
-              progressBar.style.width = `${progress}%`;
+              const progress = ((currentIndex + 1) / slideCount) * 100
+              progressBar.style.width = `${progress}%`
             }
           }
-          
+
           // Function to move slides
           function moveToSlide(index) {
             // Limit index to valid range
-            if (index < 0) index = 0;
-            if (index >= slideCount) index = slideCount - 1;
-            
-            currentIndex = index;
-            const offset = -currentIndex * (100 / slideCount);
-            
+            if (index < 0) index = 0
+            if (index >= slideCount) index = slideCount - 1
+
+            currentIndex = index
+            const offset = -currentIndex * (100 / slideCount)
+
             if (track instanceof HTMLElement) {
-              track.style.transform = `translateX(${offset}%)`;
+              track.style.transform = `translateX(${offset}%)`
             }
-            
+
             // Update buttons state
             if (prevBtn instanceof HTMLButtonElement) {
-              prevBtn.disabled = currentIndex === 0;
+              prevBtn.disabled = currentIndex === 0
             }
-            
+
             if (nextBtn instanceof HTMLButtonElement) {
-              nextBtn.disabled = currentIndex === slideCount - 1;
+              nextBtn.disabled = currentIndex === slideCount - 1
             }
-            
+
             // Update progress
-            updateProgressBar();
+            updateProgressBar()
           }
-          
+
           // Event listeners for buttons
           prevBtn.addEventListener('click', () => {
-            moveToSlide(currentIndex - 1);
-          });
-          
+            moveToSlide(currentIndex - 1)
+          })
+
           nextBtn.addEventListener('click', () => {
-            moveToSlide(currentIndex + 1);
-          });
-          
+            moveToSlide(currentIndex + 1)
+          })
+
           // Initialize
-          moveToSlide(0);
-        });
+          moveToSlide(0)
+        })
       </script>
     </div>
   </div>

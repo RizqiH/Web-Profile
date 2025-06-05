@@ -1,10 +1,10 @@
 ---
 const links = [
-  { name: "Home", href: "home" },
-  { name: "About", href: "aboutme" },
-  { name: "Projects", href: "project" },
-  { name: "Contact", href: "Contact" },
-];
+  { name: 'Home', href: 'home' },
+  { name: 'About', href: 'aboutme' },
+  { name: 'Projects', href: 'project' },
+  { name: 'Contact', href: 'Contact' },
+]
 ---
 
 <nav class="fixed top-4 inset-x-0 z-50">
@@ -101,29 +101,29 @@ const links = [
 </nav>
 
 <script>
-  const menuBtn = document.getElementById("menu-btn")!;
-  const menu = document.getElementById("menu")!;
-  const hamburgerIcon = document.getElementById("hamburger-icon")!;
-  const closeIcon = document.getElementById("close-icon")!;
-  let menuOpen = false;
+  const menuBtn = document.getElementById('menu-btn')!
+  const menu = document.getElementById('menu')!
+  const hamburgerIcon = document.getElementById('hamburger-icon')!
+  const closeIcon = document.getElementById('close-icon')!
+  let menuOpen = false
 
-  menuBtn.addEventListener("click", () => {
-    menuOpen = !menuOpen;
+  menuBtn.addEventListener('click', () => {
+    menuOpen = !menuOpen
 
     // Toggle classes for slide-down and slide-up animation
     if (menuOpen) {
-      menu.classList.remove("hidden", "-translate-y-full");
-      menu.classList.add("translate-y-0");
-      hamburgerIcon.classList.add("hidden");
-      closeIcon.classList.remove("hidden");
+      menu.classList.remove('hidden', '-translate-y-full')
+      menu.classList.add('translate-y-0')
+      hamburgerIcon.classList.add('hidden')
+      closeIcon.classList.remove('hidden')
     } else {
-      menu.classList.remove("translate-y-0");
-      menu.classList.add("-translate-y-full");
-      closeIcon.classList.add("hidden");
-      hamburgerIcon.classList.remove("hidden");
+      menu.classList.remove('translate-y-0')
+      menu.classList.add('-translate-y-full')
+      closeIcon.classList.add('hidden')
+      hamburgerIcon.classList.remove('hidden')
 
       // Hide the menu
-      menu.classList.add("hidden");
+      menu.classList.add('hidden')
     }
-  });
+  })
 </script>
