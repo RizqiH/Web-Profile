@@ -43,6 +43,38 @@ const profile = {
         'Cloudinary',
       ],
     },
+    {
+      title: 'Muara(UnderDevelopment)',
+      description:
+        'this is an informative website/article platform where each user can upload their critical articles/writings. then they can also upload journals that contain sharp writings and there are experienced journal reviewers. this is also part of Arus Bawah Creator',
+      link: 'Under Development',
+      stack: [
+        'Svelte',
+        'Go',
+        'PostgreSQL',
+        'TailwindCSS',
+      ],
+    },
+    {
+      title: 'Trading Simulation(UnderDevelopment)',
+      description:
+        'This is a trading simulation with a realtime database using dummy data not a real data. used for learning .',
+      link: 'Under Development',
+      stack: [
+        'Nuxt',
+        'Go',
+        'PostgreeSQL',
+        'TailwindCSS',
+        'Docker',
+        'Jenkins',
+        'Github Workflows',
+        'Redis',
+        'JWT',
+        'MakeFile',
+      ],
+    }
+    
+    
   ],
 }
 ---
@@ -120,6 +152,19 @@ const profile = {
   <div
     class="flex flex-col items-center gap-4 text-left text-base text-gray-600 max-w-2xl mx-auto mt-2 md:mt-1-0 px-8 md:px-12 py-8"
   >
+  <div class="px-8 md:px-12 max-w-2xl mx-auto flex justify-center reveal">
+    <div class="grid grid-cols-1 gap-px rounded-2xl overflow-hidden sm:mx-0">
+      <div
+        class="p-8 sm:p-10 flex items-center justify-center bg-white rounded-2xl"
+      >
+        <img
+          src="assets/images/logo.png"
+          alt="Descriptive alt text"
+          class="max-h-12 object-contain rounded-2xl"
+        />
+      </div>
+    </div>
+  </div>
     <!-- Section untuk judul di tengah -->
     <div class="text-black flex flex-col items-center">
       <h1 class="text-2xl tracking-tighter font-light lg:text-4xl text-black">
@@ -164,6 +209,10 @@ const profile = {
             class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
             >Typescript</span
           >
+          <span
+            class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
+            >NuxtJS</span
+          >
         </div>
       </div>
       <div class="max-w-lg slide-up" style="animation-delay: 0.2s">
@@ -189,24 +238,15 @@ const profile = {
             class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
             >PHP</span
           >
+          <span
+            class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
+            >Go</span
+          >
         </div>
       </div>
     </div>
   </div>
 
-  <div class="px-8 md:px-12 max-w-2xl mx-auto flex justify-center reveal">
-    <div class="grid grid-cols-1 gap-px rounded-2xl overflow-hidden sm:mx-0">
-      <div
-        class="p-8 sm:p-10 flex items-center justify-center bg-white rounded-2xl"
-      >
-        <img
-          src="assets/images/logo.png"
-          alt="Descriptive alt text"
-          class="max-h-12 object-contain rounded-2xl"
-        />
-      </div>
-    </div>
-  </div>
 </section>
 
 <!-- Menambahkan jarak antar section -->
