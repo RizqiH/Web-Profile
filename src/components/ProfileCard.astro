@@ -1,404 +1,422 @@
----
-const profile = {
-  name: 'Muhammad Rizqi Amanan Habibullah',
-  occupation: 'Web Developer',
-  bio: 'Passionate developer building scalable applications. I love coding, coffee, and open-source projects.',
-  skills: [
-    'JavaScript',
-    'ReactJS',
-    'NodeJS',
-    'AstroJS',
-    'NextJS',
-    'ExpressJS',
-    'Laravel',
-    'PHP',
-    'Typescript',
-    'VueJS',
-    'Svelte',
-    'AngularJS',
-  ],
-  socialLinks: {
-    github: 'https://github.com/johndoe',
-    linkedin: 'https://linkedin.com/in/johndoe',
-  },
-  projects: [
-    {
-      title: 'Website Desa',
-      description:
-        'Arus Bawah Creator is a digital platform that supports local creative communities, especially for youth in the field of information technology, with documentation of activities and digital collaboration spaces.',
-      link: 'https://arusbawahcreator.vercel.app/',
-      stack: ['Next', 'Express', 'Firebase', 'Typescript', 'TailwindCSS'],
+<script>
+  const profile = {
+    name: 'Muhammad Rizqi Amanan Habibullah',
+    occupation: 'Web Developer',
+    bio: 'Passionate developer building scalable applications. I love coding, coffee, and open-source projects.',
+    skills: [
+      'JavaScript',
+      'ReactJS',
+      'NodeJS',
+      'AstroJS',
+      'NextJS',
+      'ExpressJS',
+      'Laravel',
+      'PHP',
+      'Typescript',
+      'VueJS',
+      'Svelte',
+      'AngularJS',
+    ],
+    socialLinks: {
+      github: 'https://github.com/johndoe',
+      linkedin: 'https://linkedin.com/in/johndoe',
     },
-    {
-      title: 'Animal Mart',
-      description:
-        'an online store that provides a wide range of products for animals, including livestock, birds, pets, as well as various types of quality feed.(this is the final project of the person I am jockeying for)',
-      link: 'https://animal-marts.vercel.app/',
-      stack: [
-        'Next',
-        'Express',
-        'Firebase',
-        'Typescript',
-        'TailwindCSS',
-        'Cloudinary',
-      ],
-    },
-    {
-      title: 'Muara(UnderDevelopment)',
-      description:
-        'this is an informative website/article platform where each user can upload their critical articles/writings. then they can also upload journals that contain sharp writings and there are experienced journal reviewers. this is also part of Arus Bawah Creator',
-      link: 'Under Development',
-      stack: [
-        'Svelte',
-        'Go',
-        'PostgreSQL',
-        'TailwindCSS',
-      ],
-    },
-    {
-      title: 'Trading Simulation(UnderDevelopment)',
-      description:
-        'This is a trading simulation with a realtime database using dummy data not a real data. used for learning .',
-      link: 'Under Development',
-      stack: [
-        'Nuxt',
-        'Go',
-        'PostgreeSQL',
-        'TailwindCSS',
-        'Docker',
-        'Jenkins',
-        'Github Workflows',
-        'Redis',
-        'JWT',
-        'MakeFile',
-      ],
+    projects: [
+      {
+        title: 'Website Desa',
+        description:
+          'Arus Bawah Creator is a digital platform that supports local creative communities, especially for youth in the field of information technology, with documentation of activities and digital collaboration spaces.',
+        link: 'https://arusbawahcreator.vercel.app/',
+        stack: ['Next', 'Express', 'Firebase', 'Typescript', 'TailwindCSS'],
+      },
+      {
+        title: 'Animal Mart',
+        description:
+          'an online store that provides a wide range of products for animals, including livestock, birds, pets, as well as various types of quality feed.(this is the final project of the person I am jockeying for)',
+        link: 'https://animal-marts.vercel.app/',
+        stack: [
+          'Next',
+          'Express',
+          'Firebase',
+          'Typescript',
+          'TailwindCSS',
+          'Cloudinary',
+        ],
+      },
+      {
+        title: 'Muara(UnderDevelopment)',
+        description:
+          'this is an informative website/article platform where each user can upload their critical articles/writings. then they can also upload journals that contain sharp writings and there are experienced journal reviewers. this is also part of Arus Bawah Creator',
+        link: 'Under Development',
+        stack: [
+          'Svelte',
+          'Go',
+          'PostgreSQL',
+          'TailwindCSS',
+        ],
+      },
+      {
+        title: 'Trading Simulation(UnderDevelopment)',
+        description:
+          'This is a trading simulation with a realtime database using dummy data not a real data. used for learning .',
+        link: 'Under Development',
+        stack: [
+          'Nuxt',
+          'Go',
+          'PostgreeSQL',
+          'TailwindCSS',
+          'Docker',
+          'Jenkins',
+          'Github Workflows',
+          'Redis',
+          'JWT',
+          'MakeFile',
+        ],
+        
+      },
+      {
+        title: 'SK8Consign',
+        description:
+          'a platform for buying and selling any item on consignment. Focusing on transaction security, fast service, and an active gamer community, SK8 Consign is still a static web that has not been integrated with the backend.',
+        link: 'https://sk-8-consign.vercel.app/',
+        stack: [
+          'Svelte',
+          'Vite',
+          'TailwindCSS',
+        ],
+      },
       
-    },
-    {
-      title: 'SK8Consign',
-      description:
-        'a platform for buying and selling any item on consignment. Focusing on transaction security, fast service, and an active gamer community, SK8 Consign is still a static web that has not been integrated with the backend.',
-      link: 'https://sk-8-consign.vercel.app/',
-      stack: [
-        'Svelte',
-        'Vite',
-        'TailwindCSS',
-      ],
-    },
-    
-    
-  ],
-}
----
-
-<!-- Section paling atas dengan background putih penuh -->
-<section class="w-full fade-in">
-  <!-- Gallery Cards with Group Hover -->
-  <div
-    class="relative flex justify-center items-center gap-10 mb-28 group transition-all duration-500"
-  >
-    <!-- Person with Headphones Card -->
-    <div class="relative z-20 -mb-30 rounded-lg overflow-hidden shadow-xl">
-      <img
-        src="assets/images/fotoku.jpg"
-        alt="Person wearing headphones"
-        class="w-100 h-60 object-cover"
-      />
-    </div>
-  </div>
-
-  <!-- Text Section -->
-  <div
-    class="flex flex-col items-center gap-4 text-left text-base text-gray-600 max-w-2xl mx-auto mt-6 md:mt-12 px-8 md:px-12 py-8"
-  >
-    <!-- Section untuk judul di tengah -->
-    <div class="text-black flex flex-col items-center">
-      <h1 class="text-2xl tracking-tighter font-light lg:text-4xl text-black">
-        Rizqi
-      </h1>
-      <h2 class="text-2xl tracking-tighter font-light lg:text-4xl text-black">
-        Profile Website
-      </h2>
-    </div>
-
-    <!-- Section untuk paragraf dengan layout sejajar -->
-    <div class="flex flex-col lg:flex-row justify-center gap-4 mt-6">
-      <p class="max-w-lg slide-up" style="animation-delay: 0.1s">
-        This site contains information about me, my writings, opinions, and
-        mostly serves as personal documentation for when I am learning or
-        sharing something.
-      </p>
-      <p class="max-w-lg slide-up" style="animation-delay: 0.2s">
-        I am a passionate and meticulous computer science student with a strong
-        dedication to software development.
-      </p>
-    </div>
-  </div>
-
-  <!-- Experience Section -->
-  <div
-    class="flex flex-col items-center gap-4 text-left text-base text-gray-600 max-w-2xl mx-auto mt-2 md:mt-1-0 px-8 md:px-12 py-8"
-  >
-    <!-- Section Experience -->
-    <div class="text-black flex flex-col items-center">
-      <h1 class="text-2xl tracking-tighter font-light lg:text-4xl text-black">
-        Experience
-      </h1>
-    </div>
-
-    <!-- Section untuk paragraf dengan layout sejajar -->
-    <div class="flex flex-col lg:flex-row justify-center gap-4 mt-6">
-      <p class="max-w-lg slide-up" style="animation-delay: 0.1s">
-        I interned at a Mark Design company when I was still in SMK for 6 months
-        from 26 July 2022 - 30 December 2022 and I was there as a Fullstack
-        developer using NodeJS, ReactJS, ExpressJS, and NextJS.
-      </p>
-      <p class="max-w-lg slide-up" style="animation-delay: 0.2s">
-        and I was there also had time to do wifi maintenance in the company and
-        then also became a copywriter when I was an intern at Mark Design.
-      </p>
-    </div>
-  </div>
-
-  <!-- Skills Section - Updated to match the style above -->
-  <div
-    class="flex flex-col items-center gap-4 text-left text-base text-gray-600 max-w-2xl mx-auto mt-2 md:mt-1-0 px-8 md:px-12 py-8"
-  >
-  <div class="px-8 md:px-12 max-w-2xl mx-auto flex justify-center reveal">
-    <div class="grid grid-cols-1 gap-px rounded-2xl overflow-hidden sm:mx-0">
-      <div
-        class="p-8 sm:p-10 flex items-center justify-center bg-white rounded-2xl"
-      >
+      
+    ],
+  }
+  </script>
+  
+  <!-- Section paling atas dengan background putih penuh -->
+  <section class="w-full fade-in">
+    <!-- Gallery Cards with Group Hover -->
+    <div
+      class="relative flex justify-center items-center gap-10 mb-28 group transition-all duration-500"
+    >
+      <!-- Person with Headphones Card -->
+      <div class="relative z-20 -mb-30 rounded-lg overflow-hidden shadow-xl">
         <img
-          src="assets/images/logo.png"
-          alt="Descriptive alt text"
-          class="max-h-12 object-contain rounded-2xl"
+          src="assets/images/fotoku.jpg"
+          alt="Person wearing headphones"
+          class="w-100 h-60 object-cover"
         />
       </div>
     </div>
-  </div>
-    <!-- Section untuk judul di tengah -->
-    <div class="text-black flex flex-col items-center">
-      <h1 class="text-2xl tracking-tighter font-light lg:text-4xl text-black">
-        Skills
-      </h1>
-    </div>
-
-    <!-- Section untuk skills dengan layout sejajar -->
-    <div class="flex flex-col lg:flex-row justify-center gap-4 mt-6">
-      <div class="max-w-lg slide-up" style="animation-delay: 0.1s">
-        <p class="mb-3">Frontend Technologies:</p>
-        <div class="grid grid-cols-3 gap-2">
-          <span
-            class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-            >JavaScript</span
-          >
-          <span
-            class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-            >ReactJS</span
-          >
-          <span
-            class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-            >VueJS</span
-          >
-          <span
-            class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-            >Svelte</span
-          >
-          <span
-            class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-            >AngularJS</span
-          >
-          <span
-            class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-            >AstroJS</span
-          >
-          <span
-            class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-            >NextJS</span
-          >
-          <span
-            class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-            >Typescript</span
-          >
-          <span
-            class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-            >NuxtJS</span
-          >
-        </div>
+  
+    <!-- Text Section -->
+    <div
+      class="flex flex-col items-center gap-4 text-left text-base text-gray-600 max-w-2xl mx-auto mt-6 md:mt-12 px-8 md:px-12 py-8"
+    >
+      <!-- Section untuk judul di tengah -->
+      <div class="text-black flex flex-col items-center">
+        <h1 class="text-2xl tracking-tighter font-light lg:text-4xl text-black">
+          Rizqi
+        </h1>
+        <h2 class="text-2xl tracking-tighter font-light lg:text-4xl text-black">
+          Profile Website
+        </h2>
       </div>
-      <div class="max-w-lg slide-up" style="animation-delay: 0.2s">
-        <p class="mb-3">Backend & Frameworks:</p>
-        <div class="grid grid-cols-3 gap-2">
-          <span
-            class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-            >NodeJS</span
-          >
-          <span
-            class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-            >ExpressJS</span
-          >
-          <span
-            class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-            >Laravel</span
-          >
-          <span
-            class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-            >Typescript</span
-          >
-          <span
-            class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-            >PHP</span
-          >
-          <span
-            class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-            >Go</span
-          >
+  
+      <!-- Section untuk paragraf dengan layout sejajar -->
+      <div class="flex flex-col lg:flex-row justify-center gap-4 mt-6">
+        <p class="max-w-lg slide-up" style="animation-delay: 0.1s">
+          This site contains information about me, my writings, opinions, and
+          mostly serves as personal documentation for when I am learning or
+          sharing something.
+        </p>
+        <p class="max-w-lg slide-up" style="animation-delay: 0.2s">
+          I am a passionate and meticulous computer science student with a strong
+          dedication to software development.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Experience Section -->
+    <div
+      class="flex flex-col items-center gap-4 text-left text-base text-gray-600 max-w-2xl mx-auto mt-2 md:mt-1-0 px-8 md:px-12 py-8"
+    >
+      <!-- Section Experience -->
+      <div class="text-black flex flex-col items-center">
+        <h1 class="text-2xl tracking-tighter font-light lg:text-4xl text-black">
+          Experience
+        </h1>
+      </div>
+  
+      <!-- Section untuk paragraf dengan layout sejajar -->
+      <div class="flex flex-col lg:flex-row justify-center gap-4 mt-6">
+        <p class="max-w-lg slide-up" style="animation-delay: 0.1s">
+          I interned at a Mark Design company when I was still in SMK for 6 months
+          from 26 July 2022 - 30 December 2022 and I was there as a Fullstack
+          developer using NodeJS, ReactJS, ExpressJS, and NextJS.
+        </p>
+        <p class="max-w-lg slide-up" style="animation-delay: 0.2s">
+          and I was there also had time to do wifi maintenance in the company and
+          then also became a copywriter when I was an intern at Mark Design.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Skills Section - Updated to match the style above -->
+    <div
+      class="flex flex-col items-center gap-4 text-left text-base text-gray-600 max-w-2xl mx-auto mt-2 md:mt-1-0 px-8 md:px-12 py-8"
+    >
+    <div class="px-8 md:px-12 max-w-2xl mx-auto flex justify-center reveal">
+      <div class="grid grid-cols-1 gap-px rounded-2xl overflow-hidden sm:mx-0">
+        <div
+          class="p-8 sm:p-10 flex items-center justify-center bg-white rounded-2xl"
+        >
+          <img
+            src="assets/images/logo.png"
+            alt="Descriptive alt text"
+            class="max-h-12 object-contain rounded-2xl"
+          />
         </div>
       </div>
     </div>
-  </div>
-
-</section>
-
-<!-- Menambahkan jarak antar section -->
-<div class="mb-16"></div>
-
-<!-- Main Content with Overlay -->
-<div class="relative z-10 bg-gray-300 max-w-lg w-full mx-auto">
-  <!-- Projects Section -->
-  <div class="mt-8">
-    <h2 class="text-xl font-semibold text-gray-900 text-center mb-4">
-      My Projects
-    </h2>
-    <ul class="space-y-4">
-      {
-        profile.projects.map((project) => (
-          <li class="p-4 shadow hover:bg-gray-100 hover-lift transition-all duration-300">
-            <a
-              href={project.link}
-              class="text-lg font-semibold text-gray-900 link-underline"
+      <!-- Section untuk judul di tengah -->
+      <div class="text-black flex flex-col items-center">
+        <h1 class="text-2xl tracking-tighter font-light lg:text-4xl text-black">
+          Skills
+        </h1>
+      </div>
+  
+      <!-- Section untuk skills dengan layout sejajar -->
+      <div class="flex flex-col lg:flex-row justify-center gap-4 mt-6">
+        <div class="max-w-lg slide-up" style="animation-delay: 0.1s">
+          <p class="mb-3">Frontend Technologies:</p>
+          <div class="grid grid-cols-3 gap-2">
+            <span
+              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
+              >JavaScript</span
             >
-              {project.title}
-            </a>
-            {project.stack && (
-              <div class="mt-2 flex flex-wrap gap-2">
-                {project.stack.map((tech) => (
-                  <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            )}
-            <p class="text-gray-700 mt-1">{project.description}</p>
-          </li>
-        ))
+            <span
+              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
+              >ReactJS</span
+            >
+            <span
+              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
+              >VueJS</span
+            >
+            <span
+              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
+              >Svelte</span
+            >
+            <span
+              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
+              >AngularJS</span
+            >
+            <span
+              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
+              >AstroJS</span
+            >
+            <span
+              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
+              >NextJS</span
+            >
+            <span
+              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
+              >Typescript</span
+            >
+            <span
+              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
+              >NuxtJS</span
+            >
+          </div>
+        </div>
+        <div class="max-w-lg slide-up" style="animation-delay: 0.2s">
+          <p class="mb-3">Backend & Frameworks:</p>
+          <div class="grid grid-cols-3 gap-2">
+            <span
+              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
+              >NodeJS</span
+            >
+            <span
+              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
+              >ExpressJS</span
+            >
+            <span
+              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
+              >Laravel</span
+            >
+            <span
+              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
+              >Typescript</span
+            >
+            <span
+              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
+              >PHP</span
+            >
+            <span
+              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
+              >Go</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </section>
+  
+  <!-- Menambahkan jarak antar section -->
+  <div class="mb-16"></div>
+  
+  <!-- Main Content with Overlay -->
+  <div class="relative z-10 bg-gray-300 max-w-lg w-full mx-auto">
+    <!-- Projects Section - Simplified -->
+    <div class="mt-8 py-8 px-6">
+      <div class="text-center">
+        <a href="/project" class="projects-link">
+          <span class="text-xl font-semibold text-gray-900">My Projects</span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+  
+    <style>
+      /* Animasi Fade-In yang sederhana */
+      .fade-in {
+        opacity: 0;
+        animation: simpleFadeIn 0.8s ease forwards;
       }
-    </ul>
-  </div>
-
-  <style>
-    /* Animasi Fade-In yang sederhana */
-    .fade-in {
-      opacity: 0;
-      animation: simpleFadeIn 0.8s ease forwards;
-    }
-
-    @keyframes simpleFadeIn {
-      to {
-        opacity: 1;
+  
+      @keyframes simpleFadeIn {
+        to {
+          opacity: 1;
+        }
       }
-    }
-
-    /* Subtle slide up untuk konten */
-    .slide-up {
-      opacity: 0;
-      transform: translateY(10px);
-      animation: slideUp 0.6s ease forwards;
-    }
-
-    @keyframes slideUp {
-      0% {
+  
+      /* Subtle slide up untuk konten */
+      .slide-up {
         opacity: 0;
         transform: translateY(10px);
+        animation: slideUp 0.6s ease forwards;
       }
-      100% {
+  
+      @keyframes slideUp {
+        0% {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+  
+      /* Animasi hover yang halus untuk elemen interaktif */
+      .hover-lift {
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+  
+      .hover-lift:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+  
+      /* Underline effect halus untuk links */
+      .link-underline {
+        position: relative;
+      }
+  
+      .link-underline::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: -2px;
+        left: 0;
+        background-color: currentColor;
+        transition: width 0.3s ease;
+      }
+  
+      .link-underline:hover::after {
+        width: 100%;
+      }
+  
+      /* Projects Link Styling */
+      .projects-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        position: relative;
+        transition: all 0.3s ease;
+      }
+  
+      .projects-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: #374151;
+        transition: width 0.3s ease;
+      }
+  
+      .projects-link:hover::after {
+        width: 100%;
+      }
+  
+      .projects-link .arrow {
+        font-size: 1.2em;
+        transition: transform 0.3s ease;
+        display: inline-block;
+      }
+  
+      .projects-link:hover .arrow {
+        transform: translateX(4px);
+      }
+  
+      .projects-link:hover {
+        color: #1f2937;
+      }
+  
+      /* Animasi scroll reveal yang halus */
+      .reveal {
+        opacity: 0;
+        transform: translateY(10px);
+        transition:
+          opacity 0.5s ease,
+          transform 0.5s ease;
+      }
+  
+      .reveal.visible {
         opacity: 1;
         transform: translateY(0);
       }
-    }
-
-    /* Animasi hover yang halus untuk elemen interaktif */
-    .hover-lift {
-      transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-    }
-
-    .hover-lift:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    }
-
-    /* Underline effect halus untuk links */
-    .link-underline {
-      position: relative;
-    }
-
-    .link-underline::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 1px;
-      bottom: -2px;
-      left: 0;
-      background-color: currentColor;
-      transition: width 0.3s ease;
-    }
-
-    .link-underline:hover::after {
-      width: 100%;
-    }
-
-    /* Animasi scroll reveal yang halus */
-    .reveal {
-      opacity: 0;
-      transform: translateY(10px);
-      transition:
-        opacity 0.5s ease,
-        transform 0.5s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Hover Animation for Grouped Images - simplified */
-    .group:hover {
-      transform: scale(1.03);
-      transition: transform 0.4s ease-in-out;
-    }
-  </style>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Simple scroll reveal
-      const revealElements = document.querySelectorAll('.reveal')
-
-      function checkReveal() {
-        revealElements.forEach((element) => {
-          const elementTop = element.getBoundingClientRect().top
-          const elementVisible = 150
-
-          if (elementTop < window.innerHeight - elementVisible) {
-            element.classList.add('visible')
-          }
-        })
+  
+      /* Hover Animation for Grouped Images - simplified */
+      .group:hover {
+        transform: scale(1.03);
+        transition: transform 0.4s ease-in-out;
       }
-
-      window.addEventListener('scroll', checkReveal)
-      checkReveal() // Check on load
-    })
-  </script>
-</div>
+    </style>
+  
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Simple scroll reveal
+        const revealElements = document.querySelectorAll('.reveal')
+  
+        function checkReveal() {
+          revealElements.forEach((element) => {
+            const elementTop = element.getBoundingClientRect().top
+            const elementVisible = 150
+  
+            if (elementTop < window.innerHeight - elementVisible) {
+              element.classList.add('visible')
+            }
+          })
+        }
+  
+        window.addEventListener('scroll', checkReveal)
+        checkReveal() // Check on load
+      })
+    </script>
+  </div>

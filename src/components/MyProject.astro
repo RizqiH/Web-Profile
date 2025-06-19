@@ -1,196 +1,468 @@
-<section class="scroll-mt-24 bg-gray-300" id="work">
+---
+// Interface untuk Project Cards
+const projectCards = [
+  {
+    id: 1,
+    role: "Frontend Developer",
+    duration: "August 2024-August 2024", 
+    title: "Website Desa",
+    description: "Arus Bawah Creator is a digital platform that supports local creative communities, especially for youth in the field of information technology, with documentation of activities and digital collaboration spaces.",
+    shortDescription: "A Website Profile Platform",
+    link: "https://arusbawahcreator.vercel.app/",
+    techStack: ["Next", "TypeScript", "Express","Firebase","TailwindCSS"],
+    bgImage: "/assets/images/p.png" // path ke image background
+  },
+  {
+    id: 2, 
+    role: "Full Stack Developer",
+    duration: "Juny 2025-Juny 2025",
+    title: "Animal Mart", 
+    description: "an online store that provides a wide range of products for animals, including livestock, birds, pets, as well as various types of quality feed.",
+    shortDescription: "Pet Store",
+    link: "https://animal-marts.vercel.app/",
+    techStack: ["Next", "Express", "TypeScript","Firebase","Cloudinary","TailwindCSS"],
+    bgImage: "/assets/images/p1.png"
+  },
+  {
+    id: 3,
+    role: "Full Stack Developer", 
+    duration: "2025 June - Present",
+    title: "Muara(UnderDevelopment)",
+    description: "this is an informative website/article platform where each user can upload their critical articles/writings. then they can also upload journals that contain sharp writings and there are experienced journal reviewers. this is also part of Arus Bawah Creator",
+    shortDescription: "An Article Website and Journals",
+    link: "#", 
+    techStack: ["Svelte", "Go", "Firebase","TailwindCSS"],
+    bgImage: "/assets/images/p2.png"
+  },
+  {
+    id: 4,
+    role: "Frontend Developer", 
+    duration: "2025 May- 2025 May",
+    title: "SK8Consign",
+    description: "a platform for buying and selling any item on consignment. Focusing on transaction security, fast service, and an active gamer community, SK8 Consign is still a static web that has not been integrated with the backend.",
+    shortDescription: "A platform for buying and sell any item on consignment",
+    link: "https://sk-8-consign.vercel.app/", 
+    techStack: ["Svelte", "TailwindCSS","Vite"],
+    bgImage: "/assets/images/p3.png"
+  },
+  {
+    id: 5,
+    role: "Full Stack Developer", 
+    duration: "2025 June- 2025 June",
+    title: "TradingSimulation(UnderDevelopment)",
+    description: "This is a trading simulation with a realtime database using dummy data not a real data. used for learning .",
+    shortDescription: "A platform for Trading use dummy data",
+    link: "#", 
+    techStack: ["Nuxt", "Go","PostgreeSQL","TailwindCSS","Docker","Jenkins","Github Workflows","Redis","JWT","Makefile"],
+    bgImage: "/assets/images/p4.png"
+  }
+];
+---
+
+<section class="scroll-mt-24 bg-gray-300 overflow-hidden" id="work">
   <div class="px-8 md:px-12 py-24 max-w-2xl mx-auto">
     <h2 class="text-xl tracking-tighter font-light text-black">
       Some of Minimal work.
     </h2>
 
-    <div class="flex flex-col w-full">
-      <!-- Simple Image Slider -->
-      <div class="relative mt-4">
-        <!-- Carousel Container -->
-        <div id="carousel" class="relative">
-          <!-- Slide Images -->
-          <div class="slides-container overflow-hidden relative">
-            <div
-              class="slides-track flex transition-transform duration-300"
-              id="slides-track"
-            >
-              <div class="slide w-full flex-shrink-0">
-                <img
-                  src="../assets/images/p.png"
-                  alt="Project image"
-                  class="w-full h-auto"
-                />
-              </div>
-              <div class="slide w-full flex-shrink-0">
-                <img
-                  src="../assets/images/logo.png"
-                  alt="Logo image"
-                  class="w-full h-auto"
-                />
-              </div>
-              <div class="slide w-full flex-shrink-0">
-                <img
-                  src="../assets/images/logo.png"
-                  alt="Logo image"
-                  class="w-full h-auto"
-                />
-              </div>
-              <div class="slide w-full flex-shrink-0">
-                <img
-                  src="../assets/images/logo.png"
-                  alt="Logo image"
-                  class="w-full h-auto"
-                />
-              </div>
-              <div class="slide w-full flex-shrink-0">
-                <img
-                  src="../assets/images/logo.png"
-                  alt="Logo image"
-                  class="w-full h-auto"
-                />
-              </div>
-            </div>
-          </div>
+    <!-- Project Title - Moved here -->
+    <div class="projectTitle mt-12 p-6 bg-gray-300 ">
+      <p class="font-bold text-[28px] max-md:text-[22px] text-black">Projects</p>
+      <p class="mb-6 text-[16px] max-md:text-[14px] text-black">A glimpse of the stuffs I've built along the way!</p>
+    </div>
 
-          <!-- Navigation Buttons -->
-          <div class="flex justify-center mt-4 space-x-4">
-            <button
-              id="prevBtn"
-              class="bg-gray-300 hover:bg-zinc-200 focus:bg-zinc-50 rounded-lg inline-flex items-center text-center text-black p-2 ring-1 ring-zinc-300"
-            >
-              <span aria-hidden="true">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-3 w-3"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M15 19l-7-7 7-7"></path>
-                </svg>
-              </span>
-              <span class="sr-only">Previous</span>
-            </button>
+    <div class="flex flex-col w-full mt-8">
+      <!-- Projects Container - Complex GSAP Animation Layout -->
+      <div class="w-full min-h-[300vh] max-h-[450vh] max-lg:min-h-[340vh] projects-container mt-10 mb-64 pt-24">
 
-            <button
-              id="nextBtn"
-              class="bg-gray-300 hover:bg-zinc-200 focus:bg-zinc-50 rounded-lg inline-flex items-center text-center text-black p-2 ring-1 ring-zinc-300"
-            >
-              <span aria-hidden="true">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-3 w-3"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M9 5l7 7-7 7"></path>
-                </svg>
-              </span>
-              <span class="sr-only">Next</span>
-            </button>
-          </div>
-
-          <!-- Indicator/Progress Bar -->
-          <div class="flex mt-2 relative">
-            <div class="w-full bg-gray-400 h-1 rounded-full">
-              <div
-                id="progressBar"
-                class="bg-blue-500 h-1 rounded-full"
-                style="width: 20%;"
-              >
-              </div>
-            </div>
+        <!-- Absolute Positioned Cards Container -->
+        <div class="absolute top-16 w-full min-h-[290vh] max-lg:max-h-[300vh] max-h-[440vh] max-w-4xl left-0 right-0 mx-auto z-30">
+          <div class="max-w-full h-fit max-lg:px-2 cards-container">
+            <ul id="cards" class="lg:p-6 max-w-full">
+              {projectCards.map((project) => (
+                <li class="card" style={`background-image: url('${project.bgImage}'); background-size: cover; background-position: center; background-repeat: no-repeat;`}>
+                  <div class="absolute inset-0 bg-black opacity-70 lg:opacity-45"></div>
+                  <div class="card-body relative flex flex-col w-full justify-between items-start z-10 h-full p-6 max-lg:p-4 text-white">
+                    <div class="flex w-full justify-between items-stretch">
+                      <h2 class="max-lg:text-[14px] text-[20px]">{project.role}</h2>
+                      <p class="text-end max-lg:text-[14px]">{project.duration}</p>
+                    </div>
+                    <div class="flex w-full flex-col justify-start items-start text-[14px]">
+                      <div class="flex max-lg:flex-col max-lg:justify-start max-lg:items-start justify-between w-full items-center gap-4">
+                        <p class="max-lg:text-[18px] text-[24px] mb-2 font-semibold max-lg:-mb-4">{project.title}</p>
+                        <a href={project.link} target="_blank" rel="noopener noreferrer" 
+                           class="border border-white max-lg:text-[12px] max-lg:mt-2 text-end px-4 py-1 mb-2 hover:border-black hover:text-black hover:bg-white duration-150 transition-all hover:cursor-pointer">
+                          View Project
+                        </a>
+                      </div>
+                      <p class="text-justify block lg:hidden [text-shadow:_0_1px_0_rgb(0_0_0_/_90%)]">
+                        {project.shortDescription}
+                        <button class="text-yellow-500 font-medium underline read-more-btn" data-project={project.id}>
+                          Read more
+                        </button>
+                      </p>
+                      <p class="text-justify hidden lg:block [text-shadow:_0_1px_0_rgb(0_0_0_/_90%)]">
+                        {project.description}
+                      </p>
+                      <hr class="w-full h-[0.5px] bg-white my-4" />
+                      <div class="flex w-full flex-wrap justify-start items-start gap-2">
+                        {project.techStack.map((tech) => (
+                          <div class="flex text-[10px] lg:text-[16px] bg-white bg-opacity-35 [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] justify-start items-center gap-1 border border-white px-3 py-[2px]">
+                            <p>{tech}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
-
-      <!-- JavaScript untuk carousel -->
-      <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          // Get necessary elements dengan null check
-          const track = document.getElementById('slides-track')
-          const prevBtn = document.getElementById('prevBtn')
-          const nextBtn = document.getElementById('nextBtn')
-          const progressBar = document.getElementById('progressBar')
-
-          // Validasi elemen yang diperlukan
-          if (!track || !prevBtn || !nextBtn || !progressBar) {
-            console.error('Satu atau lebih elemen carousel tidak ditemukan')
-            return // Hentikan eksekusi jika ada elemen yang hilang
-          }
-
-          // Sekarang kita aman menggunakan elemen-elemen ini
-          const slides = track.querySelectorAll('.slide')
-          let currentIndex = 0
-          const slideCount = slides.length
-
-          // Set initial width of track (100% * number of slides)
-          track.style.width = `${slideCount * 100}%`
-
-          // Set each slide width evenly
-          slides.forEach((slide) => {
-            if (slide instanceof HTMLElement) {
-              slide.style.width = `${100 / slideCount}%`
-            }
-          })
-
-          // Update progress bar
-          function updateProgressBar() {
-            if (progressBar instanceof HTMLElement) {
-              const progress = ((currentIndex + 1) / slideCount) * 100
-              progressBar.style.width = `${progress}%`
-            }
-          }
-
-          // Function to move slides
-          function moveToSlide(index) {
-            // Limit index to valid range
-            if (index < 0) index = 0
-            if (index >= slideCount) index = slideCount - 1
-
-            currentIndex = index
-            const offset = -currentIndex * (100 / slideCount)
-
-            if (track instanceof HTMLElement) {
-              track.style.transform = `translateX(${offset}%)`
-            }
-
-            // Update buttons state
-            if (prevBtn instanceof HTMLButtonElement) {
-              prevBtn.disabled = currentIndex === 0
-            }
-
-            if (nextBtn instanceof HTMLButtonElement) {
-              nextBtn.disabled = currentIndex === slideCount - 1
-            }
-
-            // Update progress
-            updateProgressBar()
-          }
-
-          // Event listeners for buttons
-          prevBtn.addEventListener('click', () => {
-            moveToSlide(currentIndex - 1)
-          })
-
-          nextBtn.addEventListener('click', () => {
-            moveToSlide(currentIndex + 1)
-          })
-
-          // Initialize
-          moveToSlide(0)
-        })
-      </script>
     </div>
   </div>
 </section>
+
+<!-- Modal for Read More -->
+<div id="project-modal" class="fixed inset-0 z-50 flex px-3 items-center justify-center bg-black bg-opacity-60 hidden">
+  <div class="bg-white rounded-xl p-6 max-w-lg w-full text-black relative">
+    <button id="close-modal" class="absolute top-2 right-2 text-gray-500 hover:text-black text-xl font-bold">
+      &times;
+    </button>
+    <h3 id="modal-title" class="text-xl font-semibold mb-4"></h3>
+    <p id="modal-description" class="text-justify whitespace-pre-line text-[14px]"></p>
+  </div>
+</div>
+
+<style>
+  /* Complex GSAP Animation Styles - Based on React Version */
+  .projects-container {
+    width: 100%;
+    min-height: 300vh;
+    max-height: 450vh;
+    position: relative;
+    z-index: 40;  /* Lebih rendah dari navbar (100) */
+  }
+
+  @media (max-width: 1024px) {
+    .projects-container {
+      min-height: 340vh;
+      margin-top: 2.5rem !important;
+      padding-top: 3rem !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .projects-container {
+      margin-top: 3rem !important;
+      padding-top: 4rem !important;
+    }
+  }
+
+  .projectTitle {
+    position: relative;
+    z-index: 70;  /* Lebih tinggi dari cards untuk tidak tertutupi */
+    background: #d1d5db !important;  /* Force gray-300 */
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 1024px) {
+    .projectTitle {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .cards-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 550px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 1024px) {
+    .cards-container {
+      max-width: 450px;
+      height: 500px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .cards-container {
+      max-width: 380px;
+      height: 450px;
+    }
+  }
+
+  #cards {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+  }
+
+  .card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    /* Default state: grayscale (hitam putih) */
+    filter: grayscale(100%);
+    transform: scale(1);
+  }
+
+  @media (max-width: 1024px) {
+    .card {
+      border-radius: 12px;
+    }
+  }
+
+  /* Hover Effect: warna normal + sedikit scale */
+  .card:hover {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Modal Styles */
+  #project-modal {
+    backdrop-filter: blur(4px);
+  }
+</style>
+
+<script>
+  // Load GSAP Libraries
+  async function loadGSAP() {
+    if (window.gsap && window.ScrollTrigger) {
+      return { gsap: window.gsap, ScrollTrigger: window.ScrollTrigger };
+    }
+    
+    // Load GSAP Core
+    await loadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js');
+    
+    // Load ScrollTrigger Plugin
+    await loadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js');
+    
+    if (!window.gsap || !window.ScrollTrigger) {
+      throw new Error('GSAP libraries not loaded properly');
+    }
+    
+    // Configure ScrollTrigger
+    window.ScrollTrigger.normalizeScroll(true);
+    window.ScrollTrigger.config({ ignoreMobileResize: true });
+    
+    // Register plugin
+    window.gsap.registerPlugin(window.ScrollTrigger);
+    
+    return { gsap: window.gsap, ScrollTrigger: window.ScrollTrigger };
+  }
+
+  function loadScript(src) {
+    return new Promise((resolve, reject) => {
+      if (document.querySelector(`script[src="${src}"]`)) {
+        resolve();
+        return;
+      }
+      
+      const script = document.createElement('script');
+      script.src = src;
+      script.onload = resolve;
+      script.onerror = reject;
+      document.head.appendChild(script);
+    });
+  }
+
+  // Initialize Project Title Pin Animation (from React version)
+  function initProjectTitleAnimation(gsap, ScrollTrigger) {
+    const projectTitle = document.querySelector('.projectTitle');
+    
+    if (projectTitle) {
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: projectTitle,
+          start: "top 15%",
+          end: "+=200px",    
+          pin: true,
+        },
+      });
+    }
+  }
+
+  // Initialize Card Stacking Animation (exact copy from React version)
+  function initCardStackingAnimation(gsap, ScrollTrigger) {
+    const cards = document.querySelectorAll('.card');
+    const cardsContainer = document.querySelector('.cards-container');
+    const projectsContainer = document.querySelector('.projects-container');
+    
+    console.log('Cards found:', cards.length);
+    console.log('Cards container:', cardsContainer);
+    console.log('Projects container:', projectsContainer);
+    
+    if (!cards.length || !cardsContainer) {
+      console.error('Cards or container not found!');
+      return;
+    }
+
+    // Set initial positions (absolute positioning)
+    gsap.set(cards, {
+      position: "absolute",
+      top: 0,
+      left: 0,
+    });
+
+    // Set initial z-index: E-commerce paling atas, Mobile Banking paling bawah
+    cards.forEach((card, index) => {
+      const zIndexValue = cards.length - index;
+      gsap.set(card, {
+        zIndex: zIndexValue  // E-commerce = 3, Task = 2, Mobile = 1
+      });
+      console.log(`Card ${index + 1} (${card.querySelector('h2').textContent}) - z-index: ${zIndexValue}`);
+    });
+
+    console.log('Initial positions and z-index set. Order: E-commerce (top) -> Task -> Mobile (bottom)');
+
+    // Create stacking timeline exactly like React version
+    const stackTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: cardsContainer,
+        start: "top 30%",
+        end: "+=300%",
+        scrub: 1,
+        pin: true,
+        pinSpacing: true,
+        onUpdate: (self) => {
+          if (self.progress >= 0.95) {
+            gsap.set(cardsContainer, {
+              position: "fixed",
+              top: 0,
+              left: "50%",
+              transform: "translateX(-50%)",
+              width: "100%",
+              zIndex: 40,
+            });
+
+            gsap.set(projectsContainer, {
+              zIndex: 0,
+            });
+          } else {
+            gsap.set(projectsContainer, {
+              zIndex: 50,
+            });
+          }
+        },
+        onLeaveBack: () => {
+          gsap.set(cardsContainer, {
+            clearProps: "all",
+          });
+        },
+      },
+    });
+
+    // Move cards up dengan urutan: E-commerce -> Task Management -> Mobile Banking
+    stackTimeline.to(cards, {
+      yPercent: -100,
+      stagger: {
+        amount: 1.5,      // Total waktu stagger 1.5 detik
+        from: "start"     // Mulai dari card pertama (E-commerce)
+      },
+      ease: "none",
+    });
+
+    // Refresh ScrollTrigger to detect layout changes
+    ScrollTrigger.refresh();
+    
+    console.log('Card stacking animation created successfully');
+  }
+
+  // Initialize Modal functionality
+  function initModal() {
+    const modal = document.getElementById('project-modal');
+    const closeBtn = document.getElementById('close-modal');
+    const readMoreBtns = document.querySelectorAll('.read-more-btn');
+
+    // Use same data structure from Astro frontmatter
+    const projectData = {
+      '1': { 
+        title: 'E-Commerce Platform', 
+        description: 'A modern e-commerce platform with advanced features including real-time inventory management, secure payment processing, and responsive design for optimal user experience across all devices.' 
+      },
+      '2': { 
+        title: 'Task Management App', 
+        description: 'A comprehensive task management application with real-time collaboration features, drag-and-drop functionality, and advanced project tracking capabilities.' 
+      },
+      '3': { 
+        title: 'Mobile Banking App', 
+        description: 'A secure and intuitive mobile banking application with biometric authentication, real-time transactions, and comprehensive financial management tools.' 
+      }
+    };
+
+    readMoreBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const projectId = btn.getAttribute('data-project');
+        const project = projectData[projectId];
+        if (project) {
+          document.getElementById('modal-title').textContent = project.title;
+          document.getElementById('modal-description').textContent = project.description;
+          modal.classList.remove('hidden');
+        }
+      });
+    });
+
+    closeBtn?.addEventListener('click', () => modal.classList.add('hidden'));
+    modal?.addEventListener('click', (e) => {
+      if (e.target === modal) modal.classList.add('hidden');
+    });
+  }
+
+  // Initialize everything
+  async function init() {
+    try {
+      console.log('Loading GSAP...');
+      const { gsap, ScrollTrigger } = await loadGSAP();
+      
+      console.log('GSAP loaded successfully, waiting for DOM...');
+      
+      // Wait a bit for DOM to be fully ready
+      await new Promise(resolve => setTimeout(resolve, 100));
+      
+      // Initialize all animations from React version
+      initProjectTitleAnimation(gsap, ScrollTrigger);
+      
+      // Additional delay for card animation
+      setTimeout(() => {
+        initCardStackingAnimation(gsap, ScrollTrigger);
+      }, 200);
+      
+      initModal();
+      
+      console.log('All animations initialized successfully');
+    } catch (error) {
+      console.error('Failed to load GSAP:', error);
+      // Fallback if GSAP fails
+      initModal();
+    }
+  }
+
+  // Start when DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+  // Cleanup
+  window.addEventListener('beforeunload', () => {
+    if (window.ScrollTrigger && window.ScrollTrigger.getAll) {
+      window.ScrollTrigger.getAll().forEach(t => t.kill());
+    }
+  });
+</script> 
