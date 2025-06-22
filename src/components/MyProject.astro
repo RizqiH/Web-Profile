@@ -1,4 +1,12 @@
 ---
+// Interface untuk GSAP dan ScrollTrigger type declarations
+declare global {
+  interface Window {
+    gsap: any;
+    ScrollTrigger: any;
+  }
+}
+
 // Interface untuk Project Cards
 const projectCards = [
   {
@@ -95,7 +103,7 @@ const projectCards = [
                           View Project
                         </a>
                       </div>
-                      <p class="text-justify block lg:hidden [text-shadow:_0_1px_0_rgb(0_0_0_/_90%)]">
+                      <p class="text-justify lg:hidden [text-shadow:_0_1px_0_rgb(0_0_0_/_90%)]">
                         {project.shortDescription}
                         <button class="text-yellow-500 font-medium underline read-more-btn" data-project={project.id}>
                           Read more
@@ -125,7 +133,7 @@ const projectCards = [
 </section>
 
 <!-- Modal for Read More -->
-<div id="project-modal" class="fixed inset-0 z-50 flex px-3 items-center justify-center bg-black bg-opacity-60 hidden">
+<div id="project-modal" class="fixed inset-0 z-50 px-3 items-center justify-center bg-black bg-opacity-60 hidden">
   <div class="bg-white rounded-xl p-6 max-w-lg w-full text-black relative">
     <button id="close-modal" class="absolute top-2 right-2 text-gray-500 hover:text-black text-xl font-bold">
       &times;
@@ -237,6 +245,14 @@ const projectCards = [
   #project-modal {
     backdrop-filter: blur(4px);
   }
+
+  #project-modal.hidden {
+    display: none;
+  }
+  
+  #project-modal:not(.hidden) {
+    display: flex;
+  }
 </style>
 
 <script>
@@ -266,7 +282,7 @@ const projectCards = [
     return { gsap: window.gsap, ScrollTrigger: window.ScrollTrigger };
   }
 
-  function loadScript(src) {
+  function loadScript(src: string): Promise<void> {
     return new Promise((resolve, reject) => {
       if (document.querySelector(`script[src="${src}"]`)) {
         resolve();
@@ -275,14 +291,14 @@ const projectCards = [
       
       const script = document.createElement('script');
       script.src = src;
-      script.onload = resolve;
+      script.onload = () => resolve();
       script.onerror = reject;
       document.head.appendChild(script);
     });
   }
 
   // Initialize Project Title Pin Animation (from React version)
-  function initProjectTitleAnimation(gsap, ScrollTrigger) {
+  function initProjectTitleAnimation(gsap: any, ScrollTrigger: any) {
     const projectTitle = document.querySelector('.projectTitle');
     
     if (projectTitle) {
@@ -298,7 +314,7 @@ const projectCards = [
   }
 
   // Initialize Card Stacking Animation (exact copy from React version)
-  function initCardStackingAnimation(gsap, ScrollTrigger) {
+  function initCardStackingAnimation(gsap: any, ScrollTrigger: any) {
     const cards = document.querySelectorAll('.card');
     const cardsContainer = document.querySelector('.cards-container');
     const projectsContainer = document.querySelector('.projects-container');
@@ -320,12 +336,13 @@ const projectCards = [
     });
 
     // Set initial z-index: E-commerce paling atas, Mobile Banking paling bawah
-    cards.forEach((card, index) => {
+    cards.forEach((card: Element, index: number) => {
       const zIndexValue = cards.length - index;
       gsap.set(card, {
         zIndex: zIndexValue  // E-commerce = 3, Task = 2, Mobile = 1
       });
-      console.log(`Card ${index + 1} (${card.querySelector('h2').textContent}) - z-index: ${zIndexValue}`);
+      const cardTitle = card.querySelector('h2');
+      console.log(`Card ${index + 1} (${cardTitle?.textContent || 'Unknown'}) - z-index: ${zIndexValue}`);
     });
 
     console.log('Initial positions and z-index set. Order: E-commerce (top) -> Task -> Mobile (bottom)');
@@ -339,7 +356,7 @@ const projectCards = [
         scrub: 1,
         pin: true,
         pinSpacing: true,
-        onUpdate: (self) => {
+        onUpdate: (self: any) => {
           if (self.progress >= 0.95) {
             gsap.set(cardsContainer, {
               position: "fixed",
@@ -350,13 +367,17 @@ const projectCards = [
               zIndex: 40,
             });
 
-            gsap.set(projectsContainer, {
-              zIndex: 0,
-            });
+            if (projectsContainer) {
+              gsap.set(projectsContainer, {
+                zIndex: 0,
+              });
+            }
           } else {
-            gsap.set(projectsContainer, {
-              zIndex: 50,
-            });
+            if (projectsContainer) {
+              gsap.set(projectsContainer, {
+                zIndex: 50,
+              });
+            }
           }
         },
         onLeaveBack: () => {
@@ -388,38 +409,57 @@ const projectCards = [
     const modal = document.getElementById('project-modal');
     const closeBtn = document.getElementById('close-modal');
     const readMoreBtns = document.querySelectorAll('.read-more-btn');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDescription = document.getElementById('modal-description');
 
     // Use same data structure from Astro frontmatter
-    const projectData = {
+    const projectData: Record<string, { title: string; description: string }> = {
       '1': { 
-        title: 'E-Commerce Platform', 
-        description: 'A modern e-commerce platform with advanced features including real-time inventory management, secure payment processing, and responsive design for optimal user experience across all devices.' 
+        title: 'Website Desa', 
+        description: 'Arus Bawah Creator is a digital platform that supports local creative communities, especially for youth in the field of information technology, with documentation of activities and digital collaboration spaces.' 
       },
       '2': { 
-        title: 'Task Management App', 
-        description: 'A comprehensive task management application with real-time collaboration features, drag-and-drop functionality, and advanced project tracking capabilities.' 
+        title: 'Animal Mart', 
+        description: 'an online store that provides a wide range of products for animals, including livestock, birds, pets, as well as various types of quality feed.' 
       },
       '3': { 
-        title: 'Mobile Banking App', 
-        description: 'A secure and intuitive mobile banking application with biometric authentication, real-time transactions, and comprehensive financial management tools.' 
+        title: 'Muara(UnderDevelopment)', 
+        description: 'this is an informative website/article platform where each user can upload their critical articles/writings. then they can also upload journals that contain sharp writings and there are experienced journal reviewers. this is also part of Arus Bawah Creator' 
+      },
+              '4': { 
+          title: 'SK8Consign', 
+          description: 'a platform for buying and selling any item on consignment. Focusing on transaction security, fast service, and an active gamer community, SK8 Consign is still a static web that has not been integrated with the backend.' 
+        },
+      '5': { 
+        title: 'TradingSimulation(UnderDevelopment)', 
+        description: 'This is a trading simulation with a realtime database using dummy data not a real data. used for learning .' 
       }
     };
 
     readMoreBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         const projectId = btn.getAttribute('data-project');
-        const project = projectData[projectId];
-        if (project) {
-          document.getElementById('modal-title').textContent = project.title;
-          document.getElementById('modal-description').textContent = project.description;
-          modal.classList.remove('hidden');
+        if (projectId && projectData[projectId]) {
+          const project = projectData[projectId];
+          if (modalTitle && modalDescription && modal) {
+            modalTitle.textContent = project.title;
+            modalDescription.textContent = project.description;
+            modal.classList.remove('hidden');
+          }
         }
       });
     });
 
-    closeBtn?.addEventListener('click', () => modal.classList.add('hidden'));
+    closeBtn?.addEventListener('click', () => {
+      if (modal) {
+        modal.classList.add('hidden');
+      }
+    });
+    
     modal?.addEventListener('click', (e) => {
-      if (e.target === modal) modal.classList.add('hidden');
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+      }
     });
   }
 
@@ -432,7 +472,7 @@ const projectCards = [
       console.log('GSAP loaded successfully, waiting for DOM...');
       
       // Wait a bit for DOM to be fully ready
-      await new Promise(resolve => setTimeout(resolve, 100));
+      await new Promise<void>(resolve => setTimeout(() => resolve(), 100));
       
       // Initialize all animations from React version
       initProjectTitleAnimation(gsap, ScrollTrigger);
@@ -462,7 +502,7 @@ const projectCards = [
   // Cleanup
   window.addEventListener('beforeunload', () => {
     if (window.ScrollTrigger && window.ScrollTrigger.getAll) {
-      window.ScrollTrigger.getAll().forEach(t => t.kill());
+      window.ScrollTrigger.getAll().forEach((t: any) => t.kill());
     }
   });
 </script> 
