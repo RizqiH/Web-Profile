@@ -1,92 +1,81 @@
 <script>
   const profile = {
-    name: 'Muhammad Rizqi Amanan Habibullah',
-    occupation: 'Web Developer',
-    bio: 'Passionate developer building scalable applications. I love coding, coffee, and open-source projects.',
+    name: 'Muhammad Rizqi Amanan Habibulloh',
+    occupation: 'Mobile Developer & Full Stack Web Developer',
+    bio: 'Computer Science student specializing in cross-platform mobile development (Flutter/Dart) and native Android (Kotlin), as well as scalable backend services with Go, Python, and Node.js.',
     skills: [
+      'Flutter',
+      'Dart',
+      'Kotlin',
+      'Jetpack Compose',
       'JavaScript',
+      'TypeScript',
       'ReactJS',
-      'NodeJS',
-      'AstroJS',
       'NextJS',
+      'NodeJS',
       'ExpressJS',
+      'Go',
+      'Python',
       'Laravel',
       'PHP',
-      'Typescript',
       'VueJS',
       'Svelte',
-      'AngularJS',
+      'MySQL',
+      'PostgreSQL',
+      'Firebase',
+      'Redis',
+      'Docker',
+      'Clean Architecture',
+      'BLoC Pattern',
+      'MVVM',
     ],
     socialLinks: {
-      github: 'https://github.com/johndoe',
-      linkedin: 'https://linkedin.com/in/johndoe',
+      github: 'https://github.com/RizqiH',
+      linkedin: 'https://linkedin.com/in/rizki-amanan',
     },
     projects: [
       {
-        title: 'Website Desa',
+        title: 'Face Verification',
         description:
-          'Arus Bawah Creator is a digital platform that supports local creative communities, especially for youth in the field of information technology, with documentation of activities and digital collaboration spaces.',
-        link: 'https://arusbawahcreator.vercel.app/',
-        stack: ['Next', 'Express', 'Firebase', 'Typescript', 'TailwindCSS'],
+          'Enterprise-grade attendance system with real-time face recognition (Flutter, Go Gin, Python InsightFace).',
+        link: 'https://github.com/RizqiH/Face-verification-absen',
+        stack: ['Flutter', 'Go', 'Python', 'InsightFace', 'MySQL', 'Cloudinary'],
+      },
+      {
+        title: 'Lab QR Scanner',
+        description:
+          'Laboratory inventory Android app with QR verification, ML Kit, CameraX, Jetpack Compose, and Firebase.',
+        link: 'https://github.com/RizqiH/kotlin-peminjaman-barang-app-using-firebase',
+        stack: ['Kotlin', 'Jetpack Compose', 'Firebase', 'ML Kit', 'CameraX'],
+      },
+      {
+        title: 'Trading Simulation Platform',
+        description:
+          'Stock trading simulation with Go Clean Architecture, Nuxt 3, WebSocket, Redis, and Docker CI/CD.',
+        link: 'https://stock-simulation-frontend.vercel.app/',
+        stack: ['Go', 'Nuxt', 'TypeScript', 'MySQL', 'Redis', 'Docker'],
       },
       {
         title: 'Animal Mart',
         description:
-          'an online store that provides a wide range of products for animals, including livestock, birds, pets, as well as various types of quality feed.(this is the final project of the person I am jockeying for)',
+          'Full-stack e-commerce platform with persistent cart, order management, and real-time admin analytics.',
         link: 'https://animal-marts.vercel.app/',
-        stack: [
-          'Next',
-          'Express',
-          'Firebase',
-          'Typescript',
-          'TailwindCSS',
-          'Cloudinary',
-        ],
+        stack: ['Next.js', 'Express', 'Firebase', 'TypeScript', 'TailwindCSS'],
       },
       {
-        title: 'Muara(UnderDevelopment)',
+        title: 'AuctionHub Online Auction System',
         description:
-          'this is an informative website/article platform where each user can upload their critical articles/writings. then they can also upload journals that contain sharp writings and there are experienced journal reviewers. this is also part of Arus Bawah Creator',
-        link: 'Under Development',
-        stack: [
-          'Svelte',
-          'Go',
-          'PostgreSQL',
-          'TailwindCSS',
-        ],
+          'Real-time online bidding system built with PHP 8.1, MySQL, AdminLTE, and Docker containerization.',
+        link: 'https://uaspemweb.wasmer.app/',
+        stack: ['PHP', 'MySQL', 'AdminLTE', 'Docker'],
       },
       {
-        title: 'Trading Simulation(UnderDevelopment)',
+        title: 'Village Web Platform',
         description:
-          'This is a trading simulation with a realtime database using dummy data not a real data. used for learning .',
-        link: 'Under Development',
-        stack: [
-          'Nuxt',
-          'Go',
-          'PostgreeSQL',
-          'TailwindCSS',
-          'Docker',
-          'Jenkins',
-          'Github Workflows',
-          'Redis',
-          'JWT',
-          'MakeFile',
-        ],
-        
+          'Digital community platform supporting local creative initiatives of Wersah Gang III (Arus Bawah Creator).',
+        link: 'https://arusbawahcreator.vercel.app/',
+        stack: ['Next.js', 'Express', 'Firebase', 'TypeScript', 'TailwindCSS'],
       },
-      {
-        title: 'SK8Consign',
-        description:
-          'a platform for buying and selling any item on consignment. Focusing on transaction security, fast service, and an active gamer community, SK8 Consign is still a static web that has not been integrated with the backend.',
-        link: 'https://sk-8-consign.vercel.app/',
-        stack: [
-          'Svelte',
-          'Vite',
-          'TailwindCSS',
-        ],
-      },
-      
-      
     ],
   }
   </script>
@@ -97,164 +86,185 @@
     <div
       class="relative flex justify-center items-center gap-10 mb-28 group transition-all duration-500"
     >
-      <!-- Person with Headphones Card -->
+      <!-- Profile Card Image -->
       <div class="relative z-20 -mb-30 rounded-lg overflow-hidden shadow-xl">
         <img
           src="assets/images/fotoku.jpg"
-          alt="Person wearing headphones"
+          alt="Muhammad Rizqi Amanan Habibulloh - Mobile & Full Stack Developer Portfolio Photo"
           class="w-100 h-60 object-cover"
+          loading="lazy"
         />
       </div>
     </div>
   
     <!-- Text Section -->
     <div
-      class="flex flex-col items-center gap-4 text-left text-base text-gray-600 max-w-2xl mx-auto mt-6 md:mt-12 px-8 md:px-12 py-8"
+      class="flex flex-col items-center gap-4 text-left text-base text-gray-600 max-w-3xl mx-auto mt-6 md:mt-12 px-8 md:px-12 py-8"
     >
       <!-- Section untuk judul di tengah -->
-      <div class="text-black flex flex-col items-center">
+      <div class="text-black flex flex-col items-center text-center">
         <h1 class="text-2xl tracking-tighter font-light lg:text-4xl text-black">
-          Rizqi
+          Muhammad Rizqi Amanan Habibulloh
         </h1>
-        <h2 class="text-2xl tracking-tighter font-light lg:text-4xl text-black">
-          Profile Website
+        <h2 class="text-lg tracking-tighter font-medium lg:text-xl text-gray-700 mt-2">
+          Mobile Developer (Flutter / Kotlin) & Full Stack Web Developer
         </h2>
+        <p class="text-sm text-gray-500 mt-1">Surabaya, Indonesia | rizkiamanan@gmail.com | +62 812 1781 0896</p>
       </div>
   
-      <!-- Section untuk paragraf dengan layout sejajar -->
+      <!-- Section untuk paragraf summary -->
       <div class="flex flex-col lg:flex-row justify-center gap-4 mt-6">
-        <p class="max-w-lg slide-up" style="animation-delay: 0.1s">
-          This site contains information about me, my writings, opinions, and
-          mostly serves as personal documentation for when I am learning or
-          sharing something.
+        <p class="max-w-lg slide-up text-justify" style="animation-delay: 0.1s">
+          Computer Science student specializing in cross-platform mobile development with expertise in Flutter/Dart and native Android (Kotlin). Proven track record building production-ready mobile applications using Clean Architecture, BLoC pattern, MVVM, and AI/ML integration.
         </p>
-        <p class="max-w-lg slide-up" style="animation-delay: 0.2s">
-          I am a passionate and meticulous computer science student with a strong
-          dedication to software development.
+        <p class="max-w-lg slide-up text-justify" style="animation-delay: 0.2s">
+          Experienced in state management (BLoC, Provider, StateFlow, GetX), RESTful APIs, Firebase ecosystem, and performance optimization across iOS & Android. Strong full-stack background with Go, Python, and Node.js for scalable backend services.
         </p>
       </div>
     </div>
   
+    <!-- Education Section -->
+    <div
+      class="flex flex-col items-center gap-4 text-left text-base text-gray-600 max-w-3xl mx-auto mt-2 px-8 md:px-12 py-6"
+    >
+      <div class="text-black flex flex-col items-center">
+        <h1 class="text-2xl tracking-tighter font-light lg:text-3xl text-black">
+          Education
+        </h1>
+      </div>
+  
+      <div class="w-full flex flex-col gap-4 mt-4">
+        <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200 flex flex-col sm:flex-row justify-between items-start sm:items-center">
+          <div>
+            <h3 class="font-bold text-gray-900 text-lg">UPN "Veteran" East Java</h3>
+            <p class="text-gray-700 text-sm">Bachelor of Informatics (GPA: 3.8 / 4.00 - 7th Semester)</p>
+          </div>
+          <span class="text-xs bg-gray-200 text-gray-800 font-semibold px-3 py-1 rounded-full mt-2 sm:mt-0">2023 - Present</span>
+        </div>
+        <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200 flex flex-col sm:flex-row justify-between items-start sm:items-center">
+          <div>
+            <h3 class="font-bold text-gray-900 text-lg">SMK Telkom Malang</h3>
+            <p class="text-gray-700 text-sm">Software Engineering</p>
+          </div>
+          <span class="text-xs bg-gray-200 text-gray-800 font-semibold px-3 py-1 rounded-full mt-2 sm:mt-0">2021 - 2023</span>
+        </div>
+      </div>
+    </div>
+
     <!-- Experience Section -->
     <div
-      class="flex flex-col items-center gap-4 text-left text-base text-gray-600 max-w-2xl mx-auto mt-2 md:mt-1-0 px-8 md:px-12 py-8"
+      class="flex flex-col items-center gap-4 text-left text-base text-gray-600 max-w-3xl mx-auto mt-4 px-8 md:px-12 py-6"
     >
-      <!-- Section Experience -->
       <div class="text-black flex flex-col items-center">
-        <h1 class="text-2xl tracking-tighter font-light lg:text-4xl text-black">
-          Experience
+        <h1 class="text-2xl tracking-tighter font-light lg:text-3xl text-black">
+          Work Experience
         </h1>
       </div>
   
-      <!-- Section untuk paragraf dengan layout sejajar -->
-      <div class="flex flex-col lg:flex-row justify-center gap-4 mt-6">
-        <p class="max-w-lg slide-up" style="animation-delay: 0.1s">
-          I interned at a Mark Design company when I was still in SMK for 6 months
-          from 26 July 2022 - 30 December 2022 and I was there as a Fullstack
-          developer using NodeJS, ReactJS, ExpressJS, and NextJS.
-        </p>
-        <p class="max-w-lg slide-up" style="animation-delay: 0.2s">
-          and I was there also had time to do wifi maintenance in the company and
-          then also became a copywriter when I was an intern at Mark Design.
-        </p>
+      <div class="w-full flex flex-col gap-4 mt-4">
+        <!-- Experience Item 1: Looyal -->
+        <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
+            <div>
+              <h3 class="font-bold text-gray-900 text-lg">Looyal (Onsite)</h3>
+              <p class="text-gray-700 font-medium text-sm">Full Stack Web Developer (Paid Internship)</p>
+            </div>
+            <span class="text-xs bg-gray-800 text-white font-medium px-3 py-1 rounded-full mt-2 sm:mt-0">Oct 2025 - Jul 2026</span>
+          </div>
+          <p class="text-xs italic text-gray-500 mb-3">Wootix - Event Ticketing & Management Platform Engineering Team</p>
+          <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+            <li>Developed automated identity-card validation system using Python-based OCR (RapidOCR) for event check-in.</li>
+            <li>Implemented multi-language (i18n) support across event creator dashboard, seat selection, and contact modal.</li>
+            <li>Integrated email validation API and transactional email sender for high delivery reliability.</li>
+            <li>Engineered check-in configuration settings, RBAC for ticket scanning, and Google Geocoding map features.</li>
+            <li>Built event creator dashboard & dynamic payment calculator using Next.js, TypeScript, and Express.</li>
+          </ul>
+        </div>
+
+        <!-- Experience Item 2: PT. Aksamedia -->
+        <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
+            <div>
+              <h3 class="font-bold text-gray-900 text-lg">PT. Aksamedia (Remote)</h3>
+              <p class="text-gray-700 font-medium text-sm">Full Stack Web Developer (Paid Internship)</p>
+            </div>
+            <span class="text-xs bg-gray-800 text-white font-medium px-3 py-1 rounded-full mt-2 sm:mt-0">Sep 2025 - Jul 2026</span>
+          </div>
+          <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+            <li>Engineered scalable e-commerce platform using Laravel and Next.js, optimizing frontend performance.</li>
+            <li>Integrated Doku Payment Gateway to facilitate secure and seamless transaction processing.</li>
+            <li>Built modular UI components using React/Vue, accelerating development of internal frameworks.</li>
+            <li>Collaborated with senior engineers via GitLab for code reviews and version control standardization.</li>
+          </ul>
+        </div>
+
+        <!-- Experience Item 3: Mark Design Startup -->
+        <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
+            <div>
+              <h3 class="font-bold text-gray-900 text-lg">Mark Design Startup (Onsite)</h3>
+              <p class="text-gray-700 font-medium text-sm">Web Developer (Internship)</p>
+            </div>
+            <span class="text-xs bg-gray-800 text-white font-medium px-3 py-1 rounded-full mt-2 sm:mt-0">Jun 2022 - Dec 2022</span>
+          </div>
+          <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+            <li>Developed responsive company profile website using ReactJS frontend, NodeJS backend, and MySQL database.</li>
+            <li>Assisted in content development by creating over 15 articles for digital platforms and copywriting.</li>
+            <li>Performed network troubleshooting and WiFi maintenance to support daily office operations.</li>
+          </ul>
+        </div>
       </div>
     </div>
   
-    <!-- Skills Section - Updated to match the style above -->
+    <!-- Skills Section -->
     <div
-      class="flex flex-col items-center gap-4 text-left text-base text-gray-600 max-w-2xl mx-auto mt-2 md:mt-1-0 px-8 md:px-12 py-8"
+      class="flex flex-col items-center gap-4 text-left text-base text-gray-600 max-w-3xl mx-auto mt-4 px-8 md:px-12 py-6"
     >
-    <div class="px-8 md:px-12 max-w-2xl mx-auto flex justify-center reveal">
-      <div class="grid grid-cols-1 gap-px rounded-2xl overflow-hidden sm:mx-0">
-        <div
-          class="p-8 sm:p-10 flex items-center justify-center bg-white rounded-2xl"
-        >
-          <img
-            src="assets/images/logo.png"
-            alt="Descriptive alt text"
-            class="max-h-12 object-contain rounded-2xl"
-          />
-        </div>
-      </div>
-    </div>
-      <!-- Section untuk judul di tengah -->
       <div class="text-black flex flex-col items-center">
-        <h1 class="text-2xl tracking-tighter font-light lg:text-4xl text-black">
-          Skills
+        <h1 class="text-2xl tracking-tighter font-light lg:text-3xl text-black">
+          Hard Skills & Certifications
         </h1>
       </div>
   
-      <!-- Section untuk skills dengan layout sejajar -->
-      <div class="flex flex-col lg:flex-row justify-center gap-4 mt-6">
-        <div class="max-w-lg slide-up" style="animation-delay: 0.1s">
-          <p class="mb-3">Frontend Technologies:</p>
-          <div class="grid grid-cols-3 gap-2">
-            <span
-              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-              >JavaScript</span
-            >
-            <span
-              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-              >ReactJS</span
-            >
-            <span
-              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-              >VueJS</span
-            >
-            <span
-              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-              >Svelte</span
-            >
-            <span
-              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-              >AngularJS</span
-            >
-            <span
-              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-              >AstroJS</span
-            >
-            <span
-              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-              >NextJS</span
-            >
-            <span
-              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-              >Typescript</span
-            >
-            <span
-              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-              >NuxtJS</span
-            >
+      <div class="w-full flex flex-col gap-6 mt-4">
+        <!-- Mobile & Languages -->
+        <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
+          <h3 class="font-bold text-gray-900 text-base mb-3">Mobile & Programming Languages</h3>
+          <div class="flex flex-wrap gap-2">
+            {['Flutter', 'Dart', 'Kotlin', 'Jetpack Compose', 'JavaScript', 'TypeScript', 'PHP', 'Go', 'Python', 'Java'].map((skill) => (
+              <span class="bg-gray-100 text-gray-800 border border-gray-200 rounded-full px-3 py-1 text-xs font-semibold shadow-sm">{skill}</span>
+            ))}
           </div>
         </div>
-        <div class="max-w-lg slide-up" style="animation-delay: 0.2s">
-          <p class="mb-3">Backend & Frameworks:</p>
-          <div class="grid grid-cols-3 gap-2">
-            <span
-              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-              >NodeJS</span
-            >
-            <span
-              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-              >ExpressJS</span
-            >
-            <span
-              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-              >Laravel</span
-            >
-            <span
-              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-              >Typescript</span
-            >
-            <span
-              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-              >PHP</span
-            >
-            <span
-              class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift"
-              >Go</span
-            >
+
+        <!-- Frontend & Backend -->
+        <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
+          <h3 class="font-bold text-gray-900 text-base mb-3">Frontend, Backend & Frameworks</h3>
+          <div class="flex flex-wrap gap-2">
+            {['React.js', 'Next.js', 'Vue.js', 'Svelte', 'Astro', 'Node.js', 'Express.js', 'Laravel', 'Gin', 'Fiber', 'Flask', 'TailwindCSS'].map((skill) => (
+              <span class="bg-gray-100 text-gray-800 border border-gray-200 rounded-full px-3 py-1 text-xs font-semibold shadow-sm">{skill}</span>
+            ))}
           </div>
+        </div>
+
+        <!-- Databases, Tools & Architecture -->
+        <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
+          <h3 class="font-bold text-gray-900 text-base mb-3">Databases, Tools & Architecture</h3>
+          <div class="flex flex-wrap gap-2">
+            {['MySQL', 'PostgreSQL', 'Firebase', 'Redis', 'MongoDB', 'Docker', 'Jenkins', 'Git', 'GitHub', 'Clean Architecture', 'BLoC Pattern', 'MVVM', 'DDD'].map((skill) => (
+              <span class="bg-gray-100 text-gray-800 border border-gray-200 rounded-full px-3 py-1 text-xs font-semibold shadow-sm">{skill}</span>
+            ))}
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
+          <h3 class="font-bold text-gray-900 text-base mb-3">Certifications</h3>
+          <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+            <li><strong class="text-gray-900">NodeJS Competency Certification (BNSP)</strong> - March 2023</li>
+            <li><strong class="text-gray-900">IT Specialist Certification in JavaScript</strong> - December 2022</li>
+            <li><strong class="text-gray-900">Telkom Digi Up JWD (BNSP)</strong> - November 2022</li>
+          </ul>
         </div>
       </div>
     </div>

@@ -1,0 +1,13 @@
+# robots.txt for Rizqi Amanan Portfolio Website
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_astro/
+
+# Sitemap
+Sitemap: https://rizqiamanan.app/sitemap.xml
+
+# Crawl-delay (optional, helps prevent server overload)
+Crawl-delay: 1
+

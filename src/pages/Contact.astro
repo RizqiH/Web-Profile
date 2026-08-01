@@ -2,13 +2,34 @@
 import Navbar from '../components/Navbar.astro'
 import Footer from '../components/Footer.astro'
 import ContactUs from '../components/ContactUs.astro'
+import SEO from '../components/SEO.astro'
+import { createWebPageStructuredData } from '../utils/structuredData'
+
+const siteURL = Astro.site || 'https://rizqiamanan.app'
+const pageData = createWebPageStructuredData(
+  siteURL,
+  '/Contact',
+  'Contact - Rizqi Amanan',
+  'Get in touch with Rizqi Amanan. Contact information including email, phone, and location in Surabaya, Jawa Timur, Indonesia. Available for web development projects and collaborations.'
+)
 ---
 
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Contact Us</title>
+    <SEO
+      title="Contact - Rizqi Amanan | Get In Touch"
+      description="Contact Rizqi Amanan for web development projects, collaborations, or inquiries. Located in Surabaya, Jawa Timur. Email: rizkiamanan@gmail.com | Phone: 0812-1781-0896"
+      canonicalURL="/Contact"
+      keywords={[
+        'contact rizqi amanan',
+        'hire web developer',
+        'surabaya developer',
+        'web developer contact',
+        'freelance developer',
+        'rizkiamanan@gmail.com',
+      ]}
+      structuredData={pageData}
+    />
   </head>
   <body>
     <Navbar />

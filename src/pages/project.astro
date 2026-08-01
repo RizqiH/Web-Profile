@@ -2,13 +2,41 @@
 import Navbar from '../components/Navbar.astro'
 import MyProject from '../components/MyProject.astro'
 import Footer from '../components/Footer.astro'
+import SEO from '../components/SEO.astro'
+import {
+  createWebPageStructuredData,
+  createPortfolioStructuredData,
+} from '../utils/structuredData'
+
+const siteURL = Astro.site || 'https://rizqiamanan.app'
+const pageData = createWebPageStructuredData(
+  siteURL,
+  '/project',
+  'Projects - Rizqi Amanan Portfolio',
+  'View mobile and full-stack projects by Rizqi Amanan including Face Verification (Flutter/Go), Lab QR Scanner (Kotlin), Trading Simulation (Go/Nuxt), Animal Mart, AuctionHub, and more.'
+)
+const portfolioData = createPortfolioStructuredData(siteURL)
 ---
 
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Projects</title>
+    <SEO
+      title="Projects - Rizqi Amanan | Mobile & Full Stack Portfolio"
+      description="Explore mobile and web projects by Rizqi Amanan including face recognition attendance systems, QR laboratory scanners, trading simulation platforms, e-commerce, and auction platforms."
+      canonicalURL="/project"
+      keywords={[
+        'rizqi amanan projects',
+        'flutter mobile projects',
+        'android kotlin projects',
+        'face verification app',
+        'lab qr scanner',
+        'trading simulation platform',
+        'animal mart',
+        'auctionhub',
+        'full stack projects',
+      ]}
+      structuredData={[pageData, portfolioData]}
+    />
     <!-- GSAP and ScrollTrigger CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>

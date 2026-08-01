@@ -2,17 +2,40 @@
 import Navbar from '../components/Navbar.astro'
 import AboutMe from '../components/AboutMe'
 import Footer from '../components/Footer.astro'
+import SEO from '../components/SEO.astro'
+import { createWebPageStructuredData } from '../utils/structuredData'
 
-const name = 'Muhammad Rizqi Amanan Habibulah'
+const name = 'Muhammad Rizqi Amanan Habibulloh'
 const bio =
-  'I am a passionate software developer with a love for building scalable applications and exploring new technologies.'
+  'Computer Science student specializing in cross-platform mobile development (Flutter/Dart) and native Android (Kotlin), as well as scalable backend services.'
+
+const siteURL = Astro.site || 'https://rizqiamanan.app'
+const pageData = createWebPageStructuredData(
+  siteURL,
+  '/aboutme',
+  'About Me - Rizqi Amanan',
+  'Learn about Muhammad Rizqi Amanan Habibulloh, Mobile Developer (Flutter/Kotlin) and Full Stack Web Developer specializing in Clean Architecture, BLoC, MVVM, and scalable backend services.'
+)
 ---
 
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Me</title>
+    <SEO
+      title="About Me - Rizqi Amanan | Mobile & Full Stack Developer"
+      description="About Muhammad Rizqi Amanan Habibulloh - Computer Science student at UPN Veteran East Java. Specializing in Flutter, Kotlin, Clean Architecture, BLoC, and Full Stack Web Development."
+      canonicalURL="/aboutme"
+      keywords={[
+        'about rizqi amanan',
+        'flutter developer',
+        'android developer',
+        'kotlin developer',
+        'full stack developer bio',
+        'upn veteran jawa timur',
+        'clean architecture',
+        'bloc pattern',
+      ]}
+      structuredData={pageData}
+    />
   </head>
   <body class="bg-gray-300">
     <Navbar />
