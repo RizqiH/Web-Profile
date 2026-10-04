@@ -1,33 +1,37 @@
 <script>
   const profile = {
-    name: 'Muhammad Rizqi Amanan Habibulloh',
-    occupation: 'Mobile Developer & Full Stack Web Developer',
-    bio: 'Computer Science student specializing in cross-platform mobile development (Flutter/Dart) and native Android (Kotlin), as well as scalable backend services with Go, Python, and Node.js.',
+    name: 'Muhammad Rizqi Amanan Habibullah',
+    occupation: 'Mobile & Full Stack Web Developer',
+    bio: 'Computer Science student specializing in cross-platform mobile development (Flutter/Dart, Kotlin) and full-stack web development (Go, Python, Node.js, Next.js). Experienced in Clean Architecture, BLoC, MVVM, and AI/ML integration.',
     skills: [
       'Flutter',
       'Dart',
       'Kotlin',
-      'Jetpack Compose',
       'JavaScript',
       'TypeScript',
       'ReactJS',
       'NextJS',
-      'NodeJS',
-      'ExpressJS',
-      'Go',
-      'Python',
-      'Laravel',
-      'PHP',
       'VueJS',
       'Svelte',
+      'AngularJS',
+      'AstroJS',
+      'NodeJS',
+      'ExpressJS',
+      'Laravel',
+      'PHP',
+      'Go',
+      'Python',
+      'Gin',
+      'Fiber',
+      'Flask',
       'MySQL',
       'PostgreSQL',
       'Firebase',
       'Redis',
+      'MongoDB',
       'Docker',
-      'Clean Architecture',
-      'BLoC Pattern',
-      'MVVM',
+      'Jenkins',
+      'Git',
     ],
     socialLinks: {
       github: 'https://github.com/RizqiH',
@@ -35,46 +39,60 @@
     },
     projects: [
       {
-        title: 'Face Verification',
-        description:
-          'Enterprise-grade attendance system with real-time face recognition (Flutter, Go Gin, Python InsightFace).',
-        link: 'https://github.com/RizqiH/Face-verification-absen',
-        stack: ['Flutter', 'Go', 'Python', 'InsightFace', 'MySQL', 'Cloudinary'],
-      },
-      {
-        title: 'Lab QR Scanner',
-        description:
-          'Laboratory inventory Android app with QR verification, ML Kit, CameraX, Jetpack Compose, and Firebase.',
-        link: 'https://github.com/RizqiH/kotlin-peminjaman-barang-app-using-firebase',
-        stack: ['Kotlin', 'Jetpack Compose', 'Firebase', 'ML Kit', 'CameraX'],
-      },
-      {
         title: 'Trading Simulation Platform',
         description:
-          'Stock trading simulation with Go Clean Architecture, Nuxt 3, WebSocket, Redis, and Docker CI/CD.',
+          'A stock trading simulation platform utilizing a Go backend with Clean Architecture, Nuxt 3/TypeScript frontend, MySQL database, and Redis real-time data processing via WebSocket.',
         link: 'https://stock-simulation-frontend.vercel.app/',
-        stack: ['Go', 'Nuxt', 'TypeScript', 'MySQL', 'Redis', 'Docker'],
+        stack: ['Nuxt 3', 'Go', 'MySQL', 'Redis', 'Docker', 'Jenkins', 'WebSocket', 'JWT'],
       },
       {
         title: 'Animal Mart',
         description:
-          'Full-stack e-commerce platform with persistent cart, order management, and real-time admin analytics.',
+          'An e-commerce platform developed using Next.js 14/TypeScript frontend, Express.js backend, and Firebase Firestore database featuring order management and real-time analytics.',
         link: 'https://animal-marts.vercel.app/',
-        stack: ['Next.js', 'Express', 'Firebase', 'TypeScript', 'TailwindCSS'],
+        stack: ['Next.js 14', 'Express', 'Firebase', 'TypeScript', 'TailwindCSS'],
+      },
+      {
+        title: 'Face Verification',
+        description:
+          'An enterprise-grade attendance system with real-time face recognition built using 3-tier architecture: Flutter mobile app (Clean Architecture + BLoC), Go backend (Gin + JWT), and Python face recognition service (InsightFace).',
+        link: 'https://github.com/RizqiH/Face-verification-absen',
+        stack: ['Flutter', 'Go', 'Python', 'InsightFace', 'MySQL', 'JWT', 'Cloudinary'],
+      },
+      {
+        title: 'Lab QR Scanner',
+        description:
+          'A laboratory inventory management Android application with QR-based verification system built using Kotlin, Jetpack Compose, ML Kit, CameraX, and Firebase ecosystem.',
+        link: 'https://github.com/RizqiH/kotlin-peminjaman-barang-app-using-firebase',
+        stack: ['Kotlin', 'Jetpack Compose', 'Firebase', 'ML Kit', 'CameraX', 'Hilt', 'Cloudinary'],
       },
       {
         title: 'AuctionHub Online Auction System',
         description:
-          'Real-time online bidding system built with PHP 8.1, MySQL, AdminLTE, and Docker containerization.',
+          'An online auction system using PHP 8.1, MySQL, and AdminLTE with multi-role authentication, real-time bidding system, and responsive dashboard.',
         link: 'https://uaspemweb.wasmer.app/',
-        stack: ['PHP', 'MySQL', 'AdminLTE', 'Docker'],
+        stack: ['PHP 8.1', 'MySQL', 'AdminLTE', 'Docker'],
       },
       {
-        title: 'Village Web Platform',
+        title: 'Website Desa (Village Web Platform)',
         description:
-          'Digital community platform supporting local creative initiatives of Wersah Gang III (Arus Bawah Creator).',
+          'Arus Bawah Creator is a digital platform that supports local creative communities, featuring local events, vision, and innovation programs.',
         link: 'https://arusbawahcreator.vercel.app/',
         stack: ['Next.js', 'Express', 'Firebase', 'TypeScript', 'TailwindCSS'],
+      },
+      {
+        title: 'Muara (Under Development)',
+        description:
+          'An informative platform enabling users to publish critical articles and upload academic journals with peer review system as part of Arus Bawah Creator.',
+        link: 'Under Development',
+        stack: ['Svelte', 'Go', 'PostgreSQL', 'TailwindCSS'],
+      },
+      {
+        title: 'SK8Consign',
+        description:
+          'A platform for buying and selling items on consignment with focus on transaction security, fast service, and active gamer community.',
+        link: 'https://sk-8-consign.vercel.app/',
+        stack: ['Svelte', 'Vite', 'TailwindCSS'],
       },
     ],
   }
@@ -86,11 +104,11 @@
     <div
       class="relative flex justify-center items-center gap-10 mb-28 group transition-all duration-500"
     >
-      <!-- Profile Card Image -->
+      <!-- Person with Headphones Card -->
       <div class="relative z-20 -mb-30 rounded-lg overflow-hidden shadow-xl">
         <img
           src="assets/images/fotoku.jpg"
-          alt="Muhammad Rizqi Amanan Habibulloh - Mobile & Full Stack Developer Portfolio Photo"
+          alt="Muhammad Rizqi Amanan Habibullah - Web Developer and Full Stack Developer Portfolio Photo"
           class="w-100 h-60 object-cover"
           loading="lazy"
         />
@@ -99,172 +117,165 @@
   
     <!-- Text Section -->
     <div
-      class="flex flex-col items-center gap-4 text-left text-base text-gray-600 max-w-3xl mx-auto mt-6 md:mt-12 px-8 md:px-12 py-8"
+      class="flex flex-col items-center gap-4 text-left text-base text-gray-600 max-w-2xl mx-auto mt-6 md:mt-12 px-8 md:px-12 py-8"
     >
       <!-- Section untuk judul di tengah -->
-      <div class="text-black flex flex-col items-center text-center">
-        <h1 class="text-2xl tracking-tighter font-light lg:text-4xl text-black">
-          Muhammad Rizqi Amanan Habibulloh
-        </h1>
-        <h2 class="text-lg tracking-tighter font-medium lg:text-xl text-gray-700 mt-2">
-          Mobile Developer (Flutter / Kotlin) & Full Stack Web Developer
-        </h2>
-        <p class="text-sm text-gray-500 mt-1">Surabaya, Indonesia | rizkiamanan@gmail.com | +62 812 1781 0896</p>
-      </div>
-  
-      <!-- Section untuk paragraf summary -->
-      <div class="flex flex-col lg:flex-row justify-center gap-4 mt-6">
-        <p class="max-w-lg slide-up text-justify" style="animation-delay: 0.1s">
-          Computer Science student specializing in cross-platform mobile development with expertise in Flutter/Dart and native Android (Kotlin). Proven track record building production-ready mobile applications using Clean Architecture, BLoC pattern, MVVM, and AI/ML integration.
-        </p>
-        <p class="max-w-lg slide-up text-justify" style="animation-delay: 0.2s">
-          Experienced in state management (BLoC, Provider, StateFlow, GetX), RESTful APIs, Firebase ecosystem, and performance optimization across iOS & Android. Strong full-stack background with Go, Python, and Node.js for scalable backend services.
-        </p>
-      </div>
-    </div>
-  
-    <!-- Education Section -->
-    <div
-      class="flex flex-col items-center gap-4 text-left text-base text-gray-600 max-w-3xl mx-auto mt-2 px-8 md:px-12 py-6"
-    >
       <div class="text-black flex flex-col items-center">
-        <h1 class="text-2xl tracking-tighter font-light lg:text-3xl text-black">
-          Education
+        <h1 class="text-2xl tracking-tighter font-light lg:text-4xl text-black">
+          Rizqi
         </h1>
+        <h2 class="text-2xl tracking-tighter font-light lg:text-4xl text-black">
+          Profile Website
+        </h2>
       </div>
   
-      <div class="w-full flex flex-col gap-4 mt-4">
-        <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200 flex flex-col sm:flex-row justify-between items-start sm:items-center">
-          <div>
-            <h3 class="font-bold text-gray-900 text-lg">UPN "Veteran" East Java</h3>
-            <p class="text-gray-700 text-sm">Bachelor of Informatics (GPA: 3.8 / 4.00 - 7th Semester)</p>
-          </div>
-          <span class="text-xs bg-gray-200 text-gray-800 font-semibold px-3 py-1 rounded-full mt-2 sm:mt-0">2023 - Present</span>
-        </div>
-        <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200 flex flex-col sm:flex-row justify-between items-start sm:items-center">
-          <div>
-            <h3 class="font-bold text-gray-900 text-lg">SMK Telkom Malang</h3>
-            <p class="text-gray-700 text-sm">Software Engineering</p>
-          </div>
-          <span class="text-xs bg-gray-200 text-gray-800 font-semibold px-3 py-1 rounded-full mt-2 sm:mt-0">2021 - 2023</span>
-        </div>
+      <!-- Section untuk paragraf dengan layout sejajar -->
+      <div class="flex flex-col lg:flex-row justify-center gap-4 mt-6">
+        <p class="max-w-lg slide-up" style="animation-delay: 0.1s">
+          Computer Science student at UPN "Veteran" East Java specializing in cross-platform mobile development (Flutter, Kotlin) and full-stack web development (Go, Python, Node.js, Next.js).
+        </p>
+        <p class="max-w-lg slide-up" style="animation-delay: 0.2s">
+          Experienced in Clean Architecture, BLoC pattern, MVVM, RESTful APIs, Firebase ecosystem, and performance optimization across Android and iOS platforms.
+        </p>
       </div>
     </div>
-
+  
     <!-- Experience Section -->
     <div
-      class="flex flex-col items-center gap-4 text-left text-base text-gray-600 max-w-3xl mx-auto mt-4 px-8 md:px-12 py-6"
+      class="flex flex-col items-center gap-4 text-left text-base text-gray-600 max-w-2xl mx-auto mt-2 md:mt-1-0 px-8 md:px-12 py-8"
     >
+      <!-- Section Experience -->
       <div class="text-black flex flex-col items-center">
-        <h1 class="text-2xl tracking-tighter font-light lg:text-3xl text-black">
-          Work Experience
+        <h1 class="text-2xl tracking-tighter font-light lg:text-4xl text-black">
+          Experience
         </h1>
       </div>
   
-      <div class="w-full flex flex-col gap-4 mt-4">
-        <!-- Experience Item 1: Looyal -->
-        <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
-          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
-            <div>
-              <h3 class="font-bold text-gray-900 text-lg">Looyal (Onsite)</h3>
-              <p class="text-gray-700 font-medium text-sm">Full Stack Web Developer (Paid Internship)</p>
-            </div>
-            <span class="text-xs bg-gray-800 text-white font-medium px-3 py-1 rounded-full mt-2 sm:mt-0">Oct 2025 - Jul 2026</span>
-          </div>
-          <p class="text-xs italic text-gray-500 mb-3">Wootix - Event Ticketing & Management Platform Engineering Team</p>
-          <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
-            <li>Developed automated identity-card validation system using Python-based OCR (RapidOCR) for event check-in.</li>
-            <li>Implemented multi-language (i18n) support across event creator dashboard, seat selection, and contact modal.</li>
-            <li>Integrated email validation API and transactional email sender for high delivery reliability.</li>
-            <li>Engineered check-in configuration settings, RBAC for ticket scanning, and Google Geocoding map features.</li>
-            <li>Built event creator dashboard & dynamic payment calculator using Next.js, TypeScript, and Express.</li>
-          </ul>
+      <!-- Section untuk paragraf dengan layout sejajar -->
+      <div class="flex flex-col gap-6 mt-6 w-full">
+        <div class="flex flex-col lg:flex-row justify-center gap-4">
+          <p class="max-w-lg slide-up" style="animation-delay: 0.1s">
+            <strong class="text-gray-900">Mark Design Startup (Onsite)</strong> | June 2022 - Dec 2022<br />
+            Web Developer Intern using ReactJS, NodeJS, MySQL. Built responsive company profile websites, handled network troubleshooting & WiFi maintenance, and created digital content.
+          </p>
+          <p class="max-w-lg slide-up" style="animation-delay: 0.2s">
+            <strong class="text-gray-900">PT. Aksamedia (Remote)</strong> | Sept 2025 - July 2026<br />
+            Full Stack Web Developer (Paid Intern). Engineered scalable e-commerce platforms with Laravel & Next.js, integrated Doku Payment Gateway, and built modular UI components with React/Vue.
+          </p>
         </div>
-
-        <!-- Experience Item 2: PT. Aksamedia -->
-        <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
-          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
-            <div>
-              <h3 class="font-bold text-gray-900 text-lg">PT. Aksamedia (Remote)</h3>
-              <p class="text-gray-700 font-medium text-sm">Full Stack Web Developer (Paid Internship)</p>
-            </div>
-            <span class="text-xs bg-gray-800 text-white font-medium px-3 py-1 rounded-full mt-2 sm:mt-0">Sep 2025 - Jul 2026</span>
-          </div>
-          <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
-            <li>Engineered scalable e-commerce platform using Laravel and Next.js, optimizing frontend performance.</li>
-            <li>Integrated Doku Payment Gateway to facilitate secure and seamless transaction processing.</li>
-            <li>Built modular UI components using React/Vue, accelerating development of internal frameworks.</li>
-            <li>Collaborated with senior engineers via GitLab for code reviews and version control standardization.</li>
-          </ul>
-        </div>
-
-        <!-- Experience Item 3: Mark Design Startup -->
-        <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
-          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
-            <div>
-              <h3 class="font-bold text-gray-900 text-lg">Mark Design Startup (Onsite)</h3>
-              <p class="text-gray-700 font-medium text-sm">Web Developer (Internship)</p>
-            </div>
-            <span class="text-xs bg-gray-800 text-white font-medium px-3 py-1 rounded-full mt-2 sm:mt-0">Jun 2022 - Dec 2022</span>
-          </div>
-          <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
-            <li>Developed responsive company profile website using ReactJS frontend, NodeJS backend, and MySQL database.</li>
-            <li>Assisted in content development by creating over 15 articles for digital platforms and copywriting.</li>
-            <li>Performed network troubleshooting and WiFi maintenance to support daily office operations.</li>
-          </ul>
+        <div class="flex flex-col lg:flex-row justify-center gap-4">
+          <p class="max-w-lg slide-up" style="animation-delay: 0.3s">
+            <strong class="text-gray-900">Looyal / Wootix (Onsite)</strong> | Oct 2025 - July 2026<br />
+            Full Stack Web Developer (Paid Intern). Developed automated ID-card validation using Python OCR (RapidOCR), i18n support, transactional email APIs, configurable check-in policies, RBAC, and Express/Next.js backends.
+          </p>
         </div>
       </div>
     </div>
   
-    <!-- Skills Section -->
+    <!-- Skills Section - Updated to match the style above -->
     <div
-      class="flex flex-col items-center gap-4 text-left text-base text-gray-600 max-w-3xl mx-auto mt-4 px-8 md:px-12 py-6"
+      class="flex flex-col items-center gap-4 text-left text-base text-gray-600 max-w-2xl mx-auto mt-2 md:mt-1-0 px-8 md:px-12 py-8"
     >
+    <!-- Logos Showcase: Mark Design, Aksamedia, Wootix -->
+    <div class="px-4 sm:px-8 md:px-12 max-w-2xl mx-auto flex flex-wrap justify-center items-center gap-4 sm:gap-6 reveal">
+      <div
+        class="p-5 sm:p-8 flex items-center justify-center bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 h-24 sm:h-28 w-28 sm:w-36"
+      >
+        <img
+          src="assets/images/logo.png"
+          alt="Mark Design Logo"
+          class="max-h-10 sm:max-h-12 max-w-full object-contain rounded-2xl"
+          loading="lazy"
+        />
+      </div>
+
+      <div
+        class="p-5 sm:p-8 flex items-center justify-center bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 h-24 sm:h-28 w-28 sm:w-36"
+      >
+        <img
+          src="/assets/images/aksamedia.svg"
+          alt="PT. Aksamedia Mulia Digital Logo"
+          class="max-h-10 sm:max-h-12 max-w-full object-contain"
+          loading="lazy"
+        />
+      </div>
+
+      <div
+        class="p-5 sm:p-8 flex items-center justify-center bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 h-24 sm:h-28 w-28 sm:w-36"
+      >
+        <img
+          src="/assets/images/wootix.png"
+          alt="Wootix (Looyal Subsidiary) Logo"
+          class="max-h-7 sm:max-h-9 max-w-full object-contain"
+          loading="lazy"
+        />
+      </div>
+    </div>
+      <!-- Section untuk judul di tengah -->
       <div class="text-black flex flex-col items-center">
-        <h1 class="text-2xl tracking-tighter font-light lg:text-3xl text-black">
-          Hard Skills & Certifications
+        <h1 class="text-2xl tracking-tighter font-light lg:text-4xl text-black">
+          Skills
         </h1>
       </div>
   
-      <div class="w-full flex flex-col gap-6 mt-4">
-        <!-- Mobile & Languages -->
-        <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
-          <h3 class="font-bold text-gray-900 text-base mb-3">Mobile & Programming Languages</h3>
-          <div class="flex flex-wrap gap-2">
-            {['Flutter', 'Dart', 'Kotlin', 'Jetpack Compose', 'JavaScript', 'TypeScript', 'PHP', 'Go', 'Python', 'Java'].map((skill) => (
-              <span class="bg-gray-100 text-gray-800 border border-gray-200 rounded-full px-3 py-1 text-xs font-semibold shadow-sm">{skill}</span>
-            ))}
+      <!-- Section untuk skills dengan layout sejajar -->
+      <div class="flex flex-col gap-6 mt-6 w-full">
+        <div class="flex flex-col lg:flex-row justify-center gap-4">
+          <div class="max-w-lg w-full slide-up" style="animation-delay: 0.1s">
+            <p class="mb-3 font-semibold text-black">Mobile Development & Architecture:</p>
+            <div class="grid grid-cols-3 gap-2">
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">Flutter</span>
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">Dart</span>
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">Kotlin</span>
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">Jetpack Compose</span>
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">BLoC</span>
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">MVVM</span>
+            </div>
+          </div>
+          <div class="max-w-lg w-full slide-up" style="animation-delay: 0.2s">
+            <p class="mb-3 font-semibold text-black">Frontend Technologies:</p>
+            <div class="grid grid-cols-3 gap-2">
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">JavaScript</span>
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">TypeScript</span>
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">ReactJS</span>
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">NextJS</span>
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">VueJS</span>
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">Svelte</span>
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">AstroJS</span>
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">TailwindCSS</span>
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">NuxtJS</span>
+            </div>
           </div>
         </div>
-
-        <!-- Frontend & Backend -->
-        <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
-          <h3 class="font-bold text-gray-900 text-base mb-3">Frontend, Backend & Frameworks</h3>
-          <div class="flex flex-wrap gap-2">
-            {['React.js', 'Next.js', 'Vue.js', 'Svelte', 'Astro', 'Node.js', 'Express.js', 'Laravel', 'Gin', 'Fiber', 'Flask', 'TailwindCSS'].map((skill) => (
-              <span class="bg-gray-100 text-gray-800 border border-gray-200 rounded-full px-3 py-1 text-xs font-semibold shadow-sm">{skill}</span>
-            ))}
+        <div class="flex flex-col lg:flex-row justify-center gap-4">
+          <div class="max-w-lg w-full slide-up" style="animation-delay: 0.3s">
+            <p class="mb-3 font-semibold text-black">Backend & Frameworks:</p>
+            <div class="grid grid-cols-3 gap-2">
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">NodeJS</span>
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">ExpressJS</span>
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">Laravel</span>
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">PHP</span>
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">Go</span>
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">Python</span>
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">Gin</span>
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">Fiber</span>
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">Flask</span>
+            </div>
           </div>
-        </div>
-
-        <!-- Databases, Tools & Architecture -->
-        <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
-          <h3 class="font-bold text-gray-900 text-base mb-3">Databases, Tools & Architecture</h3>
-          <div class="flex flex-wrap gap-2">
-            {['MySQL', 'PostgreSQL', 'Firebase', 'Redis', 'MongoDB', 'Docker', 'Jenkins', 'Git', 'GitHub', 'Clean Architecture', 'BLoC Pattern', 'MVVM', 'DDD'].map((skill) => (
-              <span class="bg-gray-100 text-gray-800 border border-gray-200 rounded-full px-3 py-1 text-xs font-semibold shadow-sm">{skill}</span>
-            ))}
+          <div class="max-w-lg w-full slide-up" style="animation-delay: 0.4s">
+            <p class="mb-3 font-semibold text-black">Databases, DevOps & Tools:</p>
+            <div class="grid grid-cols-3 gap-2">
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">MySQL</span>
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">PostgreSQL</span>
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">Firebase</span>
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">Redis</span>
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">MongoDB</span>
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">Docker</span>
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">Jenkins</span>
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">CI/CD</span>
+              <span class="bg-gray-200 text-black rounded-full px-3 py-1 text-sm font-medium shadow hover-lift text-center">Git</span>
+            </div>
           </div>
-        </div>
-
-        <!-- Certifications -->
-        <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
-          <h3 class="font-bold text-gray-900 text-base mb-3">Certifications</h3>
-          <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
-            <li><strong class="text-gray-900">NodeJS Competency Certification (BNSP)</strong> - March 2023</li>
-            <li><strong class="text-gray-900">IT Specialist Certification in JavaScript</strong> - December 2022</li>
-            <li><strong class="text-gray-900">Telkom Digi Up JWD (BNSP)</strong> - November 2022</li>
-          </ul>
         </div>
       </div>
     </div>

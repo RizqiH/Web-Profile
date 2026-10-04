@@ -5,34 +5,33 @@ import Footer from '../components/Footer.astro'
 import SEO from '../components/SEO.astro'
 import { createWebPageStructuredData } from '../utils/structuredData'
 
-const name = 'Muhammad Rizqi Amanan Habibulloh'
+const name = 'Muhammad Rizqi Amanan Habibulah'
 const bio =
-  'Computer Science student specializing in cross-platform mobile development (Flutter/Dart) and native Android (Kotlin), as well as scalable backend services.'
+  'I am a passionate software developer with a love for building scalable applications and exploring new technologies.'
 
 const siteURL = Astro.site || 'https://rizqiamanan.app'
 const pageData = createWebPageStructuredData(
   siteURL,
   '/aboutme',
   'About Me - Rizqi Amanan',
-  'Learn about Muhammad Rizqi Amanan Habibulloh, Mobile Developer (Flutter/Kotlin) and Full Stack Web Developer specializing in Clean Architecture, BLoC, MVVM, and scalable backend services.'
+  'Learn about Muhammad Rizqi Amanan Habibullah, a passionate informatics student and web developer specializing in creative writing, UI/UX design, and full stack web development.'
 )
 ---
 
 <html lang="en">
   <head>
     <SEO
-      title="About Me - Rizqi Amanan | Mobile & Full Stack Developer"
-      description="About Muhammad Rizqi Amanan Habibulloh - Computer Science student at UPN Veteran East Java. Specializing in Flutter, Kotlin, Clean Architecture, BLoC, and Full Stack Web Development."
+      title="About Me - Rizqi Amanan | Web Developer & Informatics Student"
+      description="About Muhammad Rizqi Amanan Habibullah - Passionate informatics student at UPN Veteran East Java. Specializing in web development, UI/UX design, and creative writing. Learn about skills, experience, and background."
       canonicalURL="/aboutme"
       keywords={[
         'about rizqi amanan',
-        'flutter developer',
-        'android developer',
-        'kotlin developer',
-        'full stack developer bio',
+        'web developer bio',
+        'informatics student',
         'upn veteran jawa timur',
-        'clean architecture',
-        'bloc pattern',
+        'creative writing',
+        'ui ux designer',
+        'full stack developer bio',
       ]}
       structuredData={pageData}
     />

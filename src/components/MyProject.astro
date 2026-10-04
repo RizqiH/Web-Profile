@@ -7,140 +7,269 @@ declare global {
   }
 }
 
-// Interface untuk Project Cards
+// Interface untuk Project Cards (Sesuai CV Resmi)
 const projectCards = [
   {
     id: 1,
-    role: "Full-Stack Mobile Project",
-    duration: "December 2025", 
-    title: "Face Verification Attendance System",
-    description: "Enterprise-grade attendance system with real-time face recognition built using 3-tier architecture: Flutter mobile app (Clean Architecture + BLoC), Go backend (Gin + JWT), and Python face recognition service (InsightFace).",
-    shortDescription: "Real-time face recognition attendance system with Flutter & Go",
-    link: "https://github.com/RizqiH/Face-verification-absen",
-    techStack: ["Flutter", "Go (Gin)", "Python (Flask)", "InsightFace", "MySQL", "Cloudinary"],
-    bgImage: "/assets/images/p4.png"
+    role: "Full-Stack AI Project",
+    duration: "September 2026", 
+    title: "Kontena AI",
+    shortDescription: "AI Content Strategist platform that generates 1-30 day video calendars & scripts in natural Indonesian.",
+    description: "An AI Content Strategist platform that generates 1-30 day content calendars and short-video scripts (TikTok, Reels, Shorts) in natural spoken Indonesian. Engineered with Next.js, FastAPI backend, Supabase PostgreSQL, and Cerebras/Groq LLMs. Features hybrid RAG (BM25 + TF-IDF) over 8 legendary marketing books, automated script quality scoring (LLM-as-a-Judge), reference video verification, and Excel export.",
+    highlights: [
+      "Hybrid RAG (BM25 + TF-IDF) over 8 marketing books & TikTok trends",
+      "Automated script quality scoring with LLM-as-a-Judge architecture",
+      "Next.js frontend + FastAPI backend + Cerebras & Groq LLM synthesis"
+    ],
+    link: "https://github.com/RizqiH",
+    linkType: "github",
+    techStack: ["Next.js", "FastAPI", "Python", "Supabase", "Groq", "Cerebras", "Hybrid RAG", "Docker"],
+    bgImage: "/assets/images/kontena.png"
   },
   {
     id: 2,
-    role: "Full-Stack Mobile Project",
-    duration: "November 2025", 
-    title: "Lab QR Scanner",
-    description: "Laboratory inventory management Android application with QR-based verification system built using Kotlin, Jetpack Compose, ML Kit, CameraX, and Firebase ecosystem with MVVM & Hilt dependency injection.",
-    shortDescription: "Android inventory management app with ML Kit & CameraX",
-    link: "https://github.com/RizqiH/kotlin-peminjaman-barang-app-using-firebase",
-    techStack: ["Kotlin", "Jetpack Compose", "Firebase", "ML Kit", "CameraX", "Hilt"],
-    bgImage: "/assets/images/p3.png"
-  },
-  {
-    id: 3,
     role: "Individual Full-Stack Project",
     duration: "June 2025", 
     title: "Trading Simulation Platform",
-    description: "A stock trading simulation platform utilizing a Go backend with Clean Architecture patterns, Nuxt 3/TypeScript frontend, MySQL database, and Redis for real-time WebSocket stock updates and portfolio analytics.",
-    shortDescription: "Real-time stock trading simulation platform with WebSocket & Redis",
+    shortDescription: "High-concurrency stock trading simulation platform with live WebSocket data streaming & order execution.",
+    description: "A high-performance stock trading simulation platform utilizing a Go backend structured with Clean Architecture patterns, Nuxt 3/TypeScript frontend, MySQL database, and Redis for low-latency WebSocket market feeds, advanced order matching (Limit, Stop-Loss, OCO), and interactive portfolio performance analytics.",
+    highlights: [
+      "Go backend with Clean Architecture & Gin framework",
+      "Redis + WebSocket for sub-second live orderbook updates",
+      "Advanced order execution: Limit, Stop-Loss, and OCO logic"
+    ],
     link: "https://stock-simulation-frontend.vercel.app/",
-    techStack: ["Nuxt 3", "Go", "MySQL", "Redis", "WebSocket", "Docker", "Jenkins"],
+    linkType: "live",
+    techStack: ["Nuxt 3", "Go", "MySQL", "Redis", "Docker", "Jenkins", "WebSocket", "JWT"],
     bgImage: "/assets/images/p4.png"
   },
   {
-    id: 4, 
-    role: "Individual Full-Stack Project",
-    duration: "May 2025",
-    title: "Animal Mart", 
-    description: "Complete e-commerce platform built with Next.js 14/TypeScript frontend, Express.js backend, and Firebase Firestore. Features order management, product reviews, persistent cart, and real-time admin analytics.",
-    shortDescription: "E-commerce platform with real-time analytics admin dashboard",
-    link: "https://animal-marts.vercel.app/",
-    techStack: ["Next.js 14", "Express", "TypeScript", "Firebase", "Cloudinary"],
+    id: 3, 
+    role: "Individual Full-Stack Mobile Project",
+    duration: "December 2025",
+    title: "Face Verification System", 
+    shortDescription: "Enterprise smart attendance system with biometric real-time facial recognition and anti-spoofing.",
+    description: "An enterprise-grade attendance and identity verification system built using a decoupled 3-tier architecture: cross-platform Flutter mobile client (Clean Architecture + BLoC), Go Gin backend for secure business logic & JWT auth, and a dedicated Python microservice leveraging InsightFace for high-accuracy facial vector embedding.",
+    highlights: [
+      "3-tier architecture: Flutter (BLoC) + Go (Gin) + Python microservice",
+      "InsightFace deep learning model for real-time face matching",
+      "Secure JWT token exchange and Cloudinary asset management"
+    ],
+    link: "https://github.com/RizqiH/Face-verification-absen",
+    linkType: "github",
+    techStack: ["Flutter", "Go (Gin)", "Python (InsightFace)", "MySQL", "JWT", "Cloudinary"],
+    bgImage: "/assets/images/p.png"
+  },
+  {
+    id: 4,
+    role: "Individual Native Android Project", 
+    duration: "November 2025",
+    title: "Lab QR Scanner",
+    shortDescription: "Android laboratory inventory & equipment lending app with instant QR scanning.",
+    description: "A laboratory inventory management Android application featuring a QR-based equipment loan and return verification system. Engineered using Kotlin, Jetpack Compose Material3, ML Kit Barcode Scanning via CameraX, reactive StateFlow, Hilt dependency injection, and Firebase Cloud Firestore.",
+    highlights: [
+      "Modern Android UI using Kotlin & Jetpack Compose Material3",
+      "CameraX + Google ML Kit Barcode Scanner for instant QR detection",
+      "Hilt Dependency Injection & reactive StateFlow architecture"
+    ],
+    link: "https://github.com/RizqiH/kotlin-peminjaman-barang-app-using-firebase", 
+    linkType: "github",
+    techStack: ["Kotlin", "Jetpack Compose", "Firebase", "ML Kit", "CameraX", "Hilt", "Cloudinary"],
     bgImage: "/assets/images/p1.png"
   },
   {
     id: 5,
     role: "Individual Full-Stack Project", 
     duration: "May 2025",
-    title: "AuctionHub Online Auction System",
-    description: "An online auction system using PHP 8.1, MySQL, and AdminLTE with multi-role authentication (Admin/Employee/User), a real-time bidding system, and Docker containerization achieving 99.5% uptime.",
-    shortDescription: "Online auction system with real-time bidding & Docker",
-    link: "https://uaspemweb.wasmer.app/", 
-    techStack: ["PHP 8.1", "MySQL", "AdminLTE", "Docker"],
-    bgImage: "/assets/images/p.png"
+    title: "Animal Mart",
+    shortDescription: "Full-featured pet store e-commerce platform with persistent cart and admin analytics.",
+    description: "An end-to-end e-commerce platform developed with a Next.js 14 App Router / TypeScript frontend, Express.js backend API, and Firebase Firestore database. Features automated order processing, customer review mechanisms, persistent shopping cart, and an admin dashboard with inventory tracking.",
+    highlights: [
+      "Next.js 14 App Router + TypeScript with responsive Tailwind CSS",
+      "Express.js RESTful API integrated with Firebase Firestore",
+      "Complete e-commerce lifecycle: cart, checkout, reviews & admin analytics"
+    ],
+    link: "https://animal-marts.vercel.app/", 
+    linkType: "live",
+    techStack: ["Next.js 14", "Express", "TypeScript", "Firebase", "Cloudinary", "TailwindCSS"],
+    bgImage: "/assets/images/p1.png"
   },
   {
     id: 6,
-    role: "Group Project",
-    duration: "August 2024", 
+    role: "Individual Full-Stack Project", 
+    duration: "May 2025",
+    title: "AuctionHub Online Auction System",
+    shortDescription: "Web-based online bidding and auction management system with role-based access control.",
+    description: "A real-time online auction and bidding platform engineered with PHP 8.1, MySQL, and AdminLTE. Features multi-role authentication (Admin, Officer, Public Bidder), automated highest-bid evaluation, live status dashboards, and containerized Docker deployment achieving 99.5% uptime.",
+    highlights: [
+      "PHP 8.1 MVC architecture with MySQL relational database",
+      "Multi-role RBAC security for Administrators, Staff, and Bidders",
+      "Docker containerization with 99.5% uptime deployment"
+    ],
+    link: "https://uaspemweb.wasmer.app/", 
+    linkType: "live",
+    techStack: ["PHP 8.1", "MySQL", "AdminLTE", "Docker", "REST API"],
+    bgImage: "/assets/images/p3.png"
+  },
+  {
+    id: 7,
+    role: "Group Full-Stack Project", 
+    duration: "August 2024",
     title: "Village Web Platform",
-    description: "Digital community platform highlighting the creative initiatives of the Wersah Gang III community (Arus Bawah Creator), showcasing local events, vision, and innovation programs.",
-    shortDescription: "Digital community platform for Wersah Gang III",
-    link: "https://arusbawahcreator.vercel.app/",
+    shortDescription: "Community digital platform empowering local grassroots creative initiatives and event showcases.",
+    description: "Contributed to the design and development of a modern digital community portal for Arus Bawah Creator (Wersah Gang III). Showcases youth-driven innovation programs, community history, event calendars, and multimedia galleries to bridge local creative projects with wider audiences.",
+    highlights: [
+      "Collaborative digital platform for Arus Bawah Creator youth initiatives",
+      "Next.js & TypeScript frontend with responsive Tailwind CSS UI",
+      "Community event scheduler, program tracking, and multimedia showcase"
+    ],
+    link: "https://arusbawahcreator.vercel.app/", 
+    linkType: "live",
     techStack: ["Next.js", "TypeScript", "Express", "Firebase", "TailwindCSS"],
     bgImage: "/assets/images/p.png"
   },
   {
-    id: 7,
-    role: "Group Project", 
-    duration: "June 2025 (Under Development)",
-    title: "Muara",
-    description: "An informative platform enabling users to publish critical articles and upload academic journals, supported by a team of experienced reviewers as part of the Arus Bawah Creator initiative.",
-    shortDescription: "Article publishing & academic journal peer review platform",
-    link: "#", 
-    techStack: ["Svelte", "Go", "PostgreSQL", "TailwindCSS"],
-    bgImage: "/assets/images/p2.png"
+    id: 8,
+    role: "Frontend Developer", 
+    duration: "May 2025",
+    title: "SK8Consign",
+    shortDescription: "Curated consignment marketplace prioritizing transaction escrow security and community trust.",
+    description: "A high-performance client-side consignment marketplace focusing on transaction security, verified authentication of consigned items, fast search, and an active gaming & urban streetwear community.",
+    highlights: [
+      "Ultra-fast reactive interface built with Svelte, Vite, and Tailwind CSS",
+      "Consignment verification flow ensuring item authenticity and trust",
+      "Curated UX crafted for streetwear culture and gaming enthusiasts"
+    ],
+    link: "https://sk-8-consign.vercel.app/", 
+    linkType: "live",
+    techStack: ["Svelte", "Vite", "TailwindCSS"],
+    bgImage: "/assets/images/p3.png"
   }
 ];
 ---
 
 <section class="scroll-mt-24 bg-gray-300 overflow-hidden" id="work">
-  <div class="px-8 md:px-12 py-24 max-w-2xl mx-auto">
+  <div class="px-6 sm:px-8 md:px-12 py-20 max-w-4xl mx-auto">
     <h2 class="text-xl tracking-tighter font-light text-black">
       Some of Minimal work.
     </h2>
 
-    <!-- Project Title - Moved here -->
-    <div class="projectTitle mt-12 p-6 bg-gray-300 ">
+    <!-- Project Title -->
+    <div class="projectTitle mt-10 p-6 bg-gray-300">
       <p class="font-bold text-[28px] max-md:text-[22px] text-black">Projects</p>
-      <p class="mb-6 text-[16px] max-md:text-[14px] text-black">A glimpse of the stuffs I've built along the way!</p>
+      <p class="mb-4 text-[16px] max-md:text-[14px] text-black">A glimpse of the stuffs I've built along the way!</p>
     </div>
 
-    <div class="flex flex-col w-full mt-8">
-      <!-- Projects Container - Complex GSAP Animation Layout -->
-      <div class="w-full min-h-[300vh] max-h-[450vh] max-lg:min-h-[340vh] projects-container mt-10 mb-64 pt-24">
+    <div class="flex flex-col w-full mt-4">
+      <!-- Projects Container - 60fps/120fps Hardware-Accelerated GSAP Stacking -->
+      <div class="w-full min-h-[300vh] max-h-[450vh] max-lg:min-h-[340vh] projects-container mt-6 mb-64 pt-16">
 
         <!-- Absolute Positioned Cards Container -->
-        <div class="absolute top-16 w-full min-h-[290vh] max-lg:max-h-[300vh] max-h-[440vh] max-w-4xl left-0 right-0 mx-auto z-30">
+        <div class="absolute top-12 w-full min-h-[290vh] max-lg:max-h-[300vh] max-h-[440vh] max-w-4xl left-0 right-0 mx-auto z-30">
           <div class="max-w-full h-fit max-lg:px-2 cards-container">
-            <ul id="cards" class="lg:p-6 max-w-full">
+            <ul id="cards" class="p-0 lg:p-4 max-w-full">
               {projectCards.map((project) => (
-                <li class="card" style={`background-image: url('${project.bgImage}'); background-size: cover; background-position: center; background-repeat: no-repeat;`}>
-                  <div class="absolute inset-0 bg-black opacity-70 lg:opacity-45"></div>
-                  <div class="card-body relative flex flex-col w-full justify-between items-start z-10 h-full p-6 max-lg:p-4 text-white">
-                    <div class="flex w-full justify-between items-stretch">
-                      <h2 class="max-lg:text-[14px] text-[20px]">{project.role}</h2>
-                      <p class="text-end max-lg:text-[14px]">{project.duration}</p>
-                    </div>
-                    <div class="flex w-full flex-col justify-start items-start text-[14px]">
-                      <div class="flex max-lg:flex-col max-lg:justify-start max-lg:items-start justify-between w-full items-center gap-4">
-                        <p class="max-lg:text-[18px] text-[24px] mb-2 font-semibold max-lg:-mb-4">{project.title}</p>
-                        <a href={project.link} target="_blank" rel="noopener noreferrer" 
-                           class="border border-white max-lg:text-[12px] max-lg:mt-2 text-end px-4 py-1 mb-2 hover:border-black hover:text-black hover:bg-white duration-150 transition-all hover:cursor-pointer">
-                          View Project
-                        </a>
+                <li class="card group" data-project-id={project.id}>
+                  <!-- Background Image Layer (GPU layer with smooth hover) -->
+                  <div 
+                    class="card-bg absolute inset-0 bg-cover bg-center"
+                    style={`background-image: url('${project.bgImage}');`}
+                  ></div>
+
+                  <!-- High-Contrast Multi-Stop Scrim Gradient -->
+                  <div class="card-scrim absolute inset-0 pointer-events-none"></div>
+
+                  <!-- Subtle Border Accent -->
+                  <div class="absolute inset-0 rounded-[inherit] border border-white/15 pointer-events-none group-hover:border-white/30 transition-colors duration-300"></div>
+
+                  <!-- Card Content -->
+                  <div class="card-body relative flex flex-col justify-between h-full p-5 sm:p-7 md:p-8 z-10 text-white">
+                    <!-- Top Row: Counter, Role Tag, Duration -->
+                    <div class="flex items-center justify-between w-full gap-2">
+                      <div class="flex items-center gap-2 sm:gap-3">
+                        <span class="font-mono text-xs sm:text-sm font-semibold tracking-wider text-zinc-300">
+                          {String(project.id).padStart(2, '0')} / {String(projectCards.length).padStart(2, '0')}
+                        </span>
+                        <span class="h-3 w-[1px] bg-white/20"></span>
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] sm:text-xs font-mono font-medium bg-zinc-900/80 text-white border border-white/20">
+                          {project.role}
+                        </span>
                       </div>
-                      <p class="text-justify lg:hidden [text-shadow:_0_1px_0_rgb(0_0_0_/_90%)]">
+                      <span class="text-xs sm:text-sm font-mono text-zinc-300">
+                        {project.duration}
+                      </span>
+                    </div>
+
+                    <!-- Bottom Section: Title, Highlights, Tech, Actions -->
+                    <div class="flex flex-col w-full mt-auto pt-4">
+                      <!-- Title -->
+                      <h3 class="text-xl sm:text-2xl md:text-[26px] font-bold tracking-tight text-white mb-1.5 drop-shadow-sm">
+                        {project.title}
+                      </h3>
+
+                      <!-- Short Description / Value Pitch -->
+                      <p class="text-xs sm:text-sm md:text-[14px] text-zinc-200 leading-relaxed">
                         {project.shortDescription}
-                        <button class="text-yellow-500 font-medium underline read-more-btn" data-project={project.id}>
-                          Read more
-                        </button>
                       </p>
-                      <p class="text-justify hidden lg:block [text-shadow:_0_1px_0_rgb(0_0_0_/_90%)]">
-                        {project.description}
-                      </p>
-                      <hr class="w-full h-[0.5px] bg-white my-4" />
-                      <div class="flex w-full flex-wrap justify-start items-start gap-2">
-                        {project.techStack.map((tech) => (
-                          <div class="flex text-[10px] lg:text-[16px] bg-white bg-opacity-35 [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] justify-start items-center gap-1 border border-white px-3 py-[2px]">
-                            <p>{tech}</p>
-                          </div>
+
+                      <!-- Key Technical Highlights -->
+                      <ul class="mt-2.5 space-y-1 hidden sm:block">
+                        {project.highlights.map((highlight) => (
+                          <li class="flex items-center gap-2 text-xs md:text-[13px] text-zinc-300">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                            <span class="truncate">{highlight}</span>
+                          </li>
                         ))}
+                      </ul>
+
+                      <!-- Tech Stack Badges (Solid semi-translucent for 60fps GPU performance) -->
+                      <div class="flex w-full flex-wrap items-center gap-1.5 md:gap-2 mt-3 pt-3 border-t border-white/15">
+                        {project.techStack.map((tech) => (
+                          <span class="inline-flex items-center text-[10px] sm:text-xs font-mono px-2 sm:px-2.5 py-0.5 sm:py-1 rounded bg-black/60 text-zinc-100 border border-white/20">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+
+                      <!-- Action Buttons -->
+                      <div class="flex items-center justify-between sm:justify-start gap-2.5 mt-3.5 pt-1">
+                        <div class="flex items-center gap-2">
+                          {project.link !== '#' && (
+                            <a
+                              href={project.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="inline-flex items-center gap-1.5 text-xs sm:text-[13px] font-semibold px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-white text-zinc-950 hover:bg-zinc-200 transition-all duration-150 shadow-md hover:scale-[1.02] active:scale-[0.98]"
+                            >
+                              {project.linkType === 'github' ? (
+                                <>
+                                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                                  <span>GitHub Code</span>
+                                </>
+                              ) : (
+                                <>
+                                  <span>Live Demo</span>
+                                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                </>
+                              )}
+                            </a>
+                          )}
+                          {project.link === '#' && (
+                            <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg bg-zinc-800 text-zinc-300 border border-zinc-700">
+                              <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                              <span>In Development</span>
+                            </span>
+                          )}
+                        </div>
+
+                        <!-- Read More / Full Specs Trigger -->
+                        <button 
+                          class="read-more-btn inline-flex items-center gap-1 text-xs sm:text-[13px] font-medium px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-lg bg-zinc-900/80 hover:bg-zinc-800 border border-white/20 text-white transition-all duration-150 cursor-pointer"
+                          data-project={project.id}
+                        >
+                          <span>Full Specs</span>
+                          <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -154,46 +283,84 @@ const projectCards = [
   </div>
 </section>
 
-<!-- Modal for Read More -->
-<div id="project-modal" class="fixed inset-0 z-50 px-3 items-center justify-center bg-black bg-opacity-60 hidden">
-  <div class="bg-white rounded-xl p-6 max-w-lg w-full text-black relative">
-    <button id="close-modal" class="absolute top-2 right-2 text-gray-500 hover:text-black text-xl font-bold">
+<!-- Sleek Architecture & Details Modal -->
+<div id="project-modal" class="fixed inset-0 z-[120] px-4 py-8 items-center justify-center bg-black/80 hidden overflow-y-auto">
+  <div class="bg-zinc-900 border border-zinc-700 text-white rounded-2xl p-6 sm:p-8 max-w-xl w-full relative shadow-2xl my-auto animate-in fade-in zoom-in-95 duration-200">
+    <button id="close-modal" class="absolute top-4 right-4 text-zinc-400 hover:text-white text-2xl font-bold p-1 cursor-pointer transition-colors" aria-label="Close modal">
       &times;
     </button>
-    <h3 id="modal-title" class="text-xl font-semibold mb-4"></h3>
-    <p id="modal-description" class="text-justify whitespace-pre-line text-[14px]"></p>
+    
+    <div class="flex items-center gap-2 mb-3">
+      <span id="modal-role" class="px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-white/10 text-white border border-white/20"></span>
+      <span id="modal-duration" class="text-xs font-mono text-zinc-400"></span>
+    </div>
+
+    <h3 id="modal-title" class="text-xl sm:text-2xl font-bold text-white mb-3"></h3>
+    
+    <div class="space-y-4 text-zinc-200 text-sm leading-relaxed">
+      <div>
+        <h4 class="text-xs font-mono uppercase tracking-wider text-zinc-400 font-semibold mb-1">Architecture & Implementation</h4>
+        <p id="modal-description" class="whitespace-pre-line text-zinc-300"></p>
+      </div>
+
+      <div id="modal-highlights-container">
+        <h4 class="text-xs font-mono uppercase tracking-wider text-zinc-400 font-semibold mb-2">Key Highlights</h4>
+        <ul id="modal-highlights" class="space-y-1.5"></ul>
+      </div>
+
+      <div>
+        <h4 class="text-xs font-mono uppercase tracking-wider text-zinc-400 font-semibold mb-2">Technology Stack</h4>
+        <div id="modal-tech" class="flex flex-wrap gap-1.5"></div>
+      </div>
+    </div>
+
+    <div class="mt-6 pt-4 border-t border-zinc-800 flex items-center justify-end gap-3">
+      <a 
+        id="modal-link" 
+        href="#" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg bg-white text-black hover:bg-zinc-200 transition-all shadow cursor-pointer"
+      >
+        <span>Open Project</span>
+        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+      </a>
+    </div>
   </div>
 </div>
 
+<!-- Embedded JSON data for modal interactivity -->
+<script id="project-data-json" type="application/json" set:html={JSON.stringify(projectCards)}></script>
+
 <style>
-  /* Complex GSAP Animation Styles - Based on React Version */
+  /* GSAP Animation Container Styles */
   .projects-container {
     width: 100%;
     min-height: 300vh;
     max-height: 450vh;
     position: relative;
-    z-index: 40;  /* Lebih rendah dari navbar (100) */
+    z-index: 40;
   }
 
   @media (max-width: 1024px) {
     .projects-container {
       min-height: 340vh;
-      margin-top: 2.5rem !important;
-      padding-top: 3rem !important;
+      margin-top: 2rem !important;
+      padding-top: 2.5rem !important;
     }
   }
 
   @media (max-width: 768px) {
     .projects-container {
-      margin-top: 3rem !important;
-      padding-top: 4rem !important;
+      margin-top: 2rem !important;
+      padding-top: 3rem !important;
     }
   }
 
   .projectTitle {
     position: relative;
-    z-index: 70;  /* Lebih tinggi dari cards untuk tidak tertutupi */
-    background: #d1d5db !important;  /* Force gray-300 */
+    z-index: 70;
+    background: #d1d5db !important;
     margin-bottom: 2rem;
   }
 
@@ -206,22 +373,22 @@ const projectCards = [
   .cards-container {
     position: relative;
     width: 100%;
-    max-width: 600px;
-    height: 550px;
+    max-width: 660px;
+    height: 560px;
     margin: 0 auto;
   }
 
   @media (max-width: 1024px) {
     .cards-container {
-      max-width: 450px;
-      height: 500px;
+      max-width: 520px;
+      height: 540px;
     }
   }
 
   @media (max-width: 768px) {
     .cards-container {
-      max-width: 380px;
-      height: 450px;
+      max-width: 100%;
+      height: 520px;
     }
   }
 
@@ -235,6 +402,7 @@ const projectCards = [
     display: block;
   }
 
+  /* GPU Hardware-accelerated cards */
   .card {
     position: absolute;
     top: 0;
@@ -243,31 +411,51 @@ const projectCards = [
     height: 100%;
     border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-    /* Default state: grayscale (hitam putih) */
-    filter: grayscale(100%);
-    transform: scale(1);
+    box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.45);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    will-change: transform;
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 768px) {
     .card {
-      border-radius: 12px;
+      border-radius: 16px;
     }
   }
 
-  /* Hover Effect: warna normal + sedikit scale */
+  /* Background image: isolated GPU layer */
+  .card-bg {
+    filter: grayscale(100%) brightness(0.68) contrast(1.05);
+    transform: translateZ(0) scale(1);
+    transition: filter 0.5s ease, transform 0.6s ease;
+    will-change: transform, filter;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .card:hover .card-bg {
+    filter: grayscale(0%) brightness(0.88) contrast(1);
+    transform: translateZ(0) scale(1.03);
+  }
+
   .card:hover {
-    filter: grayscale(0%);
-    transform: scale(1.02);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 24px 50px -10px rgba(0, 0, 0, 0.65);
   }
 
-  /* Modal Styles */
-  #project-modal {
-    backdrop-filter: blur(4px);
+  /* High contrast multi-stop scrim gradient */
+  .card-scrim {
+    background: linear-gradient(
+      180deg,
+      rgba(10, 12, 18, 0.45) 0%,
+      rgba(10, 12, 18, 0.70) 38%,
+      rgba(10, 12, 18, 0.94) 75%,
+      rgba(10, 12, 18, 0.98) 100%
+    );
   }
 
+  /* Modal state */
   #project-modal.hidden {
     display: none;
   }
@@ -294,9 +482,8 @@ const projectCards = [
       throw new Error('GSAP libraries not loaded properly');
     }
     
-    // Configure ScrollTrigger
-    window.ScrollTrigger.normalizeScroll(true);
-    window.ScrollTrigger.config({ ignoreMobileResize: true });
+    // Configure ScrollTrigger - NO normalizeScroll so native 60-120fps trackpad scrolling is preserved!
+    window.ScrollTrigger.config({ ignoreMobileResize: true, autoRefreshEvents: "visibilitychange,DOMContentLoaded,load" });
     
     // Register plugin
     window.gsap.registerPlugin(window.ScrollTrigger);
@@ -319,7 +506,7 @@ const projectCards = [
     });
   }
 
-  // Initialize Project Title Pin Animation (from React version)
+  // Initialize Project Title Pin Animation
   function initProjectTitleAnimation(gsap: any, ScrollTrigger: any) {
     const projectTitle = document.querySelector('.projectTitle');
     
@@ -335,54 +522,47 @@ const projectCards = [
     }
   }
 
-  // Initialize Card Stacking Animation (exact copy from React version)
+  // Initialize Card Stacking Animation (Optimized 60/120fps)
   function initCardStackingAnimation(gsap: any, ScrollTrigger: any) {
     const cards = document.querySelectorAll('.card');
     const cardsContainer = document.querySelector('.cards-container');
     const projectsContainer = document.querySelector('.projects-container');
     
-    console.log('Cards found:', cards.length);
-    console.log('Cards container:', cardsContainer);
-    console.log('Projects container:', projectsContainer);
-    
     if (!cards.length || !cardsContainer) {
-      console.error('Cards or container not found!');
       return;
     }
 
-    // Set initial positions (absolute positioning)
+    // Set initial positions with GPU layer promotion
     gsap.set(cards, {
       position: "absolute",
       top: 0,
       left: 0,
+      force3D: true,
     });
 
-    // Set initial z-index: E-commerce paling atas, Mobile Banking paling bawah
+    // Set initial z-index: First card on top, subsequent cards below
     cards.forEach((card: Element, index: number) => {
       const zIndexValue = cards.length - index;
       gsap.set(card, {
-        zIndex: zIndexValue  // E-commerce = 3, Task = 2, Mobile = 1
+        zIndex: zIndexValue
       });
-      const cardTitle = card.querySelector('h2');
-      console.log(`Card ${index + 1} (${cardTitle?.textContent || 'Unknown'}) - z-index: ${zIndexValue}`);
     });
 
-    console.log('Initial positions and z-index set. Order: E-commerce (top) -> Task -> Mobile (bottom)');
-
-    // Create stacking timeline exactly like React version
+    // Create stacking timeline with ultra-smooth 0.4s scrub for zero lag
     const stackTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: cardsContainer,
-        start: "top 30%",
-        end: "+=300%",
-        scrub: 1,
+        start: "top 22%",
+        end: "+=320%",
+        scrub: 0.4, // Responsive and fluid without 1-second lag
         pin: true,
         pinSpacing: true,
+        fastScrollEnd: true,
         onUpdate: (self: any) => {
-          if (self.progress >= 0.95) {
+          if (self.progress >= 0.96) {
             gsap.set(cardsContainer, {
               position: "fixed",
-              top: 0,
+              top: "92px",
               left: "50%",
               transform: "translateX(-50%)",
               width: "100%",
@@ -410,121 +590,140 @@ const projectCards = [
       },
     });
 
-    // Move cards up dengan urutan: E-commerce -> Task Management -> Mobile Banking
+    // Hardware accelerated card upward exit
     stackTimeline.to(cards, {
-      yPercent: -100,
+      yPercent: -105,
+      force3D: true,
       stagger: {
-        amount: 1.5,      // Total waktu stagger 1.5 detik
-        from: "start"     // Mulai dari card pertama (E-commerce)
+        amount: 1.6,
+        from: "start"
       },
       ease: "none",
     });
 
-    // Refresh ScrollTrigger to detect layout changes
+    // Refresh ScrollTrigger
     ScrollTrigger.refresh();
-    
-    console.log('Card stacking animation created successfully');
   }
 
-  // Initialize Modal functionality
+  // Initialize Modal functionality with parsed data
   function initModal() {
     const modal = document.getElementById('project-modal');
     const closeBtn = document.getElementById('close-modal');
     const readMoreBtns = document.querySelectorAll('.read-more-btn');
     const modalTitle = document.getElementById('modal-title');
+    const modalRole = document.getElementById('modal-role');
+    const modalDuration = document.getElementById('modal-duration');
     const modalDescription = document.getElementById('modal-description');
+    const modalHighlights = document.getElementById('modal-highlights');
+    const modalTech = document.getElementById('modal-tech');
+    const modalLink = document.getElementById('modal-link') as HTMLAnchorElement | null;
 
-    // Use same data structure from Astro frontmatter
-    const projectData: Record<string, { title: string; description: string }> = {
-      '1': { 
-        title: 'Website Desa', 
-        description: 'Arus Bawah Creator is a digital platform that supports local creative communities, especially for youth in the field of information technology, with documentation of activities and digital collaboration spaces.' 
-      },
-      '2': { 
-        title: 'Animal Mart', 
-        description: 'an online store that provides a wide range of products for animals, including livestock, birds, pets, as well as various types of quality feed.' 
-      },
-      '3': { 
-        title: 'Muara(UnderDevelopment)', 
-        description: 'this is an informative website/article platform where each user can upload their critical articles/writings. then they can also upload journals that contain sharp writings and there are experienced journal reviewers. this is also part of Arus Bawah Creator' 
-      },
-              '4': { 
-          title: 'SK8Consign', 
-          description: 'a platform for buying and selling any item on consignment. Focusing on transaction security, fast service, and an active gamer community, SK8 Consign is still a static web that has not been integrated with the backend.' 
-        },
-      '5': { 
-        title: 'Stocksim Pro', 
-        description: 'This is a trading simulation with a realtime database With Websocket. used for learning . You must login to see another navbar' 
+    let projectMap: Record<number, any> = {};
+    const jsonElem = document.getElementById('project-data-json');
+    if (jsonElem && jsonElem.textContent) {
+      try {
+        const rawList = JSON.parse(jsonElem.textContent);
+        rawList.forEach((item: any) => {
+          projectMap[item.id] = item;
+        });
+      } catch (e) {
+        console.error('Failed to parse project data:', e);
       }
-    };
+    }
 
     readMoreBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        const projectId = btn.getAttribute('data-project');
-        if (projectId && projectData[projectId]) {
-          const project = projectData[projectId];
-          if (modalTitle && modalDescription && modal) {
-            modalTitle.textContent = project.title;
-            modalDescription.textContent = project.description;
-            modal.classList.remove('hidden');
+        const projectIdStr = btn.getAttribute('data-project');
+        if (!projectIdStr) return;
+        const project = projectMap[parseInt(projectIdStr, 10)];
+        if (!project) return;
+
+        if (modalTitle) modalTitle.textContent = project.title;
+        if (modalRole) modalRole.textContent = project.role;
+        if (modalDuration) modalDuration.textContent = project.duration;
+        if (modalDescription) modalDescription.textContent = project.description;
+
+        // Render Highlights
+        if (modalHighlights) {
+          modalHighlights.innerHTML = '';
+          if (Array.isArray(project.highlights)) {
+            project.highlights.forEach((h: string) => {
+              const li = document.createElement('li');
+              li.className = 'flex items-start gap-2 text-xs sm:text-sm text-zinc-300';
+              li.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 shrink-0"></span><span>${h}</span>`;
+              modalHighlights.appendChild(li);
+            });
           }
         }
+
+        // Render Tech Stack
+        if (modalTech) {
+          modalTech.innerHTML = '';
+          if (Array.isArray(project.techStack)) {
+            project.techStack.forEach((t: string) => {
+              const badge = document.createElement('span');
+              badge.className = 'text-[11px] font-mono px-2.5 py-0.5 rounded bg-zinc-800 text-zinc-200 border border-zinc-700';
+              badge.textContent = t;
+              modalTech.appendChild(badge);
+            });
+          }
+        }
+
+        // Render Action Button
+        if (modalLink) {
+          if (project.link && project.link !== '#') {
+            modalLink.style.display = 'inline-flex';
+            modalLink.href = project.link;
+            modalLink.querySelector('span')!.textContent = project.linkType === 'github' ? 'View on GitHub' : 'Open Live Demo';
+          } else {
+            modalLink.style.display = 'none';
+          }
+        }
+
+        modal?.classList.remove('hidden');
       });
     });
 
-    closeBtn?.addEventListener('click', () => {
-      if (modal) {
-        modal.classList.add('hidden');
-      }
-    });
-    
+    const closeModal = () => modal?.classList.add('hidden');
+    closeBtn?.addEventListener('click', closeModal);
     modal?.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.classList.add('hidden');
+      if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
+        closeModal();
       }
     });
   }
 
-  // Initialize everything
+  // Initialize on page load
   async function init() {
     try {
-      console.log('Loading GSAP...');
       const { gsap, ScrollTrigger } = await loadGSAP();
+      await new Promise<void>(resolve => setTimeout(() => resolve(), 80));
       
-      console.log('GSAP loaded successfully, waiting for DOM...');
-      
-      // Wait a bit for DOM to be fully ready
-      await new Promise<void>(resolve => setTimeout(() => resolve(), 100));
-      
-      // Initialize all animations from React version
       initProjectTitleAnimation(gsap, ScrollTrigger);
-      
-      // Additional delay for card animation
       setTimeout(() => {
         initCardStackingAnimation(gsap, ScrollTrigger);
-      }, 200);
+      }, 150);
       
       initModal();
-      
-      console.log('All animations initialized successfully');
     } catch (error) {
-      console.error('Failed to load GSAP:', error);
-      // Fallback if GSAP fails
+      console.error('GSAP Init error:', error);
       initModal();
     }
   }
 
-  // Start when DOM ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
     init();
   }
 
-  // Cleanup
   window.addEventListener('beforeunload', () => {
     if (window.ScrollTrigger && window.ScrollTrigger.getAll) {
       window.ScrollTrigger.getAll().forEach((t: any) => t.kill());
     }
   });
-</script> 
+</script>

@@ -6,7 +6,7 @@ interface AboutMeProps {
 }
 
 const AboutMe: React.FC<AboutMeProps> = ({
-  name = 'Muhammad Rizqi Amanan Habibulloh',
+  name = 'Muh. Rizqi Amanan Habibullah',
 }) => {
   const [isVisible, setIsVisible] = useState(false)
   const [typedText, setTypedText] = useState('')
@@ -166,10 +166,10 @@ const AboutMe: React.FC<AboutMeProps> = ({
                   transition: 'transform 0.2s ease-out',
                 }}
               >
-                <span className="text-4xl animate-pulse-slow">📱</span>
+                <span className="text-4xl animate-pulse-slow">🌟</span>
               </div>
 
-              {/* Name */}
+              {/* Name with glitch effect - simplified */}
               <h1 
                 className={`text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight transition-all duration-800 delay-500 ${isVisible ? 'animate-slide-in-left opacity-100' : 'opacity-0 -translate-x-10'} hover:animate-glitch`}
                 style={{
@@ -208,11 +208,11 @@ const AboutMe: React.FC<AboutMeProps> = ({
               }}
             >
               <p className="text-lg leading-relaxed text-gray-700 text-center max-w-3xl mx-auto">
-                Computer Science student at{' '}
+                I am a Computer Science student at{' '}
                 <span className="font-semibold text-gray-800 hover:text-gray-600 transition-colors duration-300 hover:animate-pulse">
                   Universitas Pembangunan Nasional "Veteran" East Java
-                </span>{' '}
-                specializing in cross-platform mobile development (Flutter/Dart) and native Android (Kotlin), with strong expertise in Clean Architecture, BLoC pattern, MVVM, and AI/ML integration. Proven track record building production-ready applications and scalable full-stack services using Go, Python, Node.js, and Laravel.
+                </span>
+                , majoring in Informatics (GPA 3.8/4.00). Specializing in cross-platform mobile development (Flutter/Dart, Kotlin) and full-stack web engineering (Go, Python, Node.js, Next.js).
               </p>
             </div>
 
@@ -224,7 +224,7 @@ const AboutMe: React.FC<AboutMeProps> = ({
                 transition: 'transform 0.2s ease-out',
               }}
             >
-              {/* Mobile App Development */}
+              {/* Mobile Development */}
               <div 
                 className={`group transition-all duration-500 delay-1100 ${isVisible ? 'animate-slide-in-bottom opacity-100' : 'opacity-0 translate-y-8'}`}
                 style={{
@@ -240,12 +240,12 @@ const AboutMe: React.FC<AboutMeProps> = ({
                     Mobile Development
                   </h3>
                   <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
-                    Building production-ready mobile apps with Flutter & Kotlin (Jetpack Compose), implementing Clean Architecture, BLoC pattern, MVVM, and AI/ML integrations.
+                    Building production-ready cross-platform mobile apps with Flutter/Dart and native Android (Kotlin, Jetpack Compose) using Clean Architecture, BLoC, and MVVM.
                   </p>
                 </div>
               </div>
 
-              {/* Full Stack & Backend */}
+              {/* Full Stack Engineering */}
               <div 
                 className={`group transition-all duration-500 delay-1200 ${isVisible ? 'animate-slide-in-bottom opacity-100' : 'opacity-0 translate-y-8'}`}
                 style={{
@@ -258,15 +258,15 @@ const AboutMe: React.FC<AboutMeProps> = ({
                     <span className="text-white text-xl">💻</span>
                   </div>
                   <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-gray-600 transition-colors duration-300">
-                    Full Stack Web
+                    Full Stack Engineering
                   </h3>
                   <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
-                    Engineering scalable web applications & RESTful APIs using Next.js, React, Node.js/Express, Laravel, Go, Python, MySQL, PostgreSQL, and Redis.
+                    Architecting scalable web applications & RESTful microservices with Go, Node.js/Express, Python, Next.js, Svelte, Laravel, PostgreSQL, and Redis.
                   </p>
                 </div>
               </div>
 
-              {/* Architecture & Performance */}
+              {/* AI/ML & Systems */}
               <div 
                 className={`group transition-all duration-500 delay-1300 ${isVisible ? 'animate-slide-in-bottom opacity-100' : 'opacity-0 translate-y-8'}`}
                 style={{
@@ -276,13 +276,13 @@ const AboutMe: React.FC<AboutMeProps> = ({
               >
                 <div className="skill-card bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-6 border border-gray-200 hover:shadow-2xl hover:shadow-gray-300/50 transition-all duration-500 hover:-translate-y-4 hover:scale-110 cursor-pointer hover:bg-gradient-to-br hover:from-gray-100 hover:to-gray-50">
                   <div className="w-12 h-12 bg-gradient-to-br from-gray-600 to-gray-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-150 group-hover:rotate-180 transition-all duration-700 group-hover:bg-gradient-to-br group-hover:from-gray-700 group-hover:to-gray-800">
-                    <span className="text-white text-xl">⚙️</span>
+                    <span className="text-white text-xl">⚡</span>
                   </div>
                   <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-gray-600 transition-colors duration-300">
-                    Architecture & DevOps
+                    AI/ML & Clean Systems
                   </h3>
                   <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
-                    Applying Clean Architecture, DDD, Docker containerization, Jenkins & GitHub Actions CI/CD pipelines, state management, and performance optimization.
+                    Integrating AI/ML features (InsightFace face recognition, RapidOCR), barcode scanning, and Docker CI/CD pipelines for robust, automated solutions.
                   </p>
                 </div>
               </div>

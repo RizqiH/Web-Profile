@@ -56,10 +56,10 @@ export function createPersonStructuredData(siteURL: string): PersonStructuredDat
   return {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    name: 'Muhammad Rizqi Amanan Habibulloh',
-    jobTitle: 'Mobile Developer & Full Stack Web Developer',
+    name: 'Muhammad Rizqi Amanan Habibullah',
+    jobTitle: 'Mobile & Full Stack Developer',
     description:
-      'Computer Science student specializing in cross-platform mobile development (Flutter/Dart) and native Android (Kotlin), as well as scalable backend services with Go, Python, and Node.js.',
+      'Computer Science student specializing in cross-platform mobile development (Flutter/Dart, Kotlin) and full-stack web development (Go, Python, Node.js, Next.js). Experienced in Clean Architecture, BLoC, MVVM, and AI/ML integration.',
     url: siteURL,
     image: new URL('/assets/images/fotoku.jpg', siteURL).href,
     sameAs: [
@@ -68,7 +68,7 @@ export function createPersonStructuredData(siteURL: string): PersonStructuredDat
     ],
     alumniOf: {
       '@type': 'CollegeOrUniversity',
-      name: 'Universitas Pembangunan Nasional "Veteran" East Java',
+      name: 'Universitas Pembangunan Nasional Veteran East Java',
     },
     email: 'rizkiamanan@gmail.com',
     address: {
@@ -82,7 +82,10 @@ export function createPersonStructuredData(siteURL: string): PersonStructuredDat
       'Flutter',
       'Dart',
       'Kotlin',
-      'Jetpack Compose',
+      'Android Native',
+      'Clean Architecture',
+      'BLoC Pattern',
+      'MVVM',
       'Web Development',
       'Full Stack Development',
       'JavaScript',
@@ -90,19 +93,18 @@ export function createPersonStructuredData(siteURL: string): PersonStructuredDat
       'React',
       'Node.js',
       'Express.js',
+      'Astro',
       'Next.js',
-      'Go',
-      'Python',
+      'Vue.js',
+      'Svelte',
       'Laravel',
       'PHP',
+      'Go',
+      'Python',
+      'Docker',
+      'Redis',
       'MySQL',
       'PostgreSQL',
-      'Firebase',
-      'Redis',
-      'Docker',
-      'Clean Architecture',
-      'BLoC Pattern',
-      'MVVM',
     ],
   }
 }
@@ -113,11 +115,11 @@ export function createWebSiteStructuredData(siteURL: string): WebSiteStructuredD
     '@type': 'WebSite',
     name: 'Rizqi Amanan - Mobile & Full Stack Developer Portfolio',
     description:
-      'Portfolio website of Muhammad Rizqi Amanan Habibulloh, a Mobile & Full Stack Developer showcasing projects, skills, and experience.',
+      'Portfolio website of Muhammad Rizqi Amanan Habibullah, a passionate mobile and full stack developer showcasing projects, skills, and experience.',
     url: siteURL,
     author: {
       '@type': 'Person',
-      name: 'Muhammad Rizqi Amanan Habibulloh',
+      name: 'Muhammad Rizqi Amanan Habibullah',
     },
   }
 }
@@ -143,7 +145,7 @@ export function createWebPageStructuredData(
     },
     about: {
       '@type': 'Person',
-      name: 'Muhammad Rizqi Amanan Habibulloh',
+      name: 'Muhammad Rizqi Amanan Habibullah',
     },
   }
 }
@@ -160,12 +162,12 @@ export function createPortfolioStructuredData(siteURL: string) {
         position: 1,
         item: {
           '@type': 'SoftwareApplication',
-          name: 'Face Verification Attendance System',
+          name: 'Trading Simulation Platform',
           description:
-            'Enterprise-grade attendance system with real-time face recognition (Flutter, Go, Python InsightFace).',
-          url: 'https://github.com/RizqiH/Face-verification-absen',
-          applicationCategory: 'MobileApplication',
-          operatingSystem: 'Android/iOS',
+            'Stock trading simulation platform using Go backend Clean Architecture, Nuxt 3 frontend, MySQL, Redis, and WebSocket.',
+          url: 'https://stock-simulation-frontend.vercel.app/',
+          applicationCategory: 'WebApplication',
+          operatingSystem: 'Web',
         },
       },
       {
@@ -173,12 +175,12 @@ export function createPortfolioStructuredData(siteURL: string) {
         position: 2,
         item: {
           '@type': 'SoftwareApplication',
-          name: 'Lab QR Scanner',
+          name: 'Face Verification Attendance System',
           description:
-            'Laboratory inventory management Android app with QR verification, ML Kit, CameraX, and Firebase.',
-          url: 'https://github.com/RizqiH/kotlin-peminjaman-barang-app-using-firebase',
+            'Real-time face recognition attendance system built with Flutter (Clean Architecture + BLoC), Go backend, and Python InsightFace.',
+          url: 'https://github.com/RizqiH/Face-verification-absen',
           applicationCategory: 'MobileApplication',
-          operatingSystem: 'Android',
+          operatingSystem: 'Android/iOS',
         },
       },
       {
@@ -186,12 +188,12 @@ export function createPortfolioStructuredData(siteURL: string) {
         position: 3,
         item: {
           '@type': 'SoftwareApplication',
-          name: 'Trading Simulation Platform',
+          name: 'Lab QR Scanner',
           description:
-            'Complete stock trading simulation application with Go Clean Architecture, Nuxt 3, WebSocket, and Redis.',
-          url: 'https://stock-simulation-frontend.vercel.app/',
-          applicationCategory: 'WebApplication',
-          operatingSystem: 'Web',
+            'Android laboratory inventory app with ML Kit QR scanning, CameraX, Jetpack Compose Material3, and Firebase.',
+          url: 'https://github.com/RizqiH/kotlin-peminjaman-barang-app-using-firebase',
+          applicationCategory: 'MobileApplication',
+          operatingSystem: 'Android',
         },
       },
       {
@@ -200,7 +202,7 @@ export function createPortfolioStructuredData(siteURL: string) {
         item: {
           '@type': 'SoftwareApplication',
           name: 'Animal Mart',
-          description: 'E-commerce platform with real-time admin analytics and persistent cart.',
+          description: 'Online store providing products for animals including livestock, birds, pets, and quality feed.',
           url: 'https://animal-marts.vercel.app/',
           applicationCategory: 'WebApplication',
           operatingSystem: 'Web',
@@ -212,7 +214,7 @@ export function createPortfolioStructuredData(siteURL: string) {
         item: {
           '@type': 'SoftwareApplication',
           name: 'AuctionHub Online Auction System',
-          description: 'Real-time online bidding system built with PHP 8.1, MySQL, AdminLTE, and Docker.',
+          description: 'Online auction system using PHP 8.1, MySQL, AdminLTE, and Docker containerization.',
           url: 'https://uaspemweb.wasmer.app/',
           applicationCategory: 'WebApplication',
           operatingSystem: 'Web',
@@ -223,7 +225,7 @@ export function createPortfolioStructuredData(siteURL: string) {
         position: 6,
         item: {
           '@type': 'SoftwareApplication',
-          name: 'Village Web Platform',
+          name: 'Website Desa - Arus Bawah Creator',
           description:
             'Digital platform supporting local creative communities with documentation and digital collaboration spaces.',
           url: 'https://arusbawahcreator.vercel.app/',
