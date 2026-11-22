@@ -13,7 +13,7 @@ const pageData = createWebPageStructuredData(
   siteURL,
   '/project',
   'Projects - Rizqi Amanan Portfolio',
-  'View portfolio projects by Rizqi Amanan including Website Desa, Animal Mart, SK8Consign, Stocksim Pro, and more. Built with React, Next.js, Node.js, and modern web technologies.'
+  'View portfolio projects by Rizqi Amanan including Kontena AI, Trading Simulation, Face Verification, Animal Mart, and more. Built with Next.js, Go, Python, Laravel, and modern web technologies.'
 )
 const portfolioData = createPortfolioStructuredData(siteURL)
 ---
@@ -22,7 +22,7 @@ const portfolioData = createPortfolioStructuredData(siteURL)
   <head>
     <SEO
       title="Projects - Rizqi Amanan | Web Development Portfolio"
-      description="Explore web development projects by Rizqi Amanan including e-commerce platforms, trading simulations, and community websites. Built with React, Next.js, Node.js, Express, TypeScript, and modern frameworks."
+      description="Explore web development projects by Rizqi Amanan including AI platforms, e-commerce, trading simulations, and community websites. Built with Next.js, Go, Python, Laravel, Express, TypeScript, and modern frameworks."
       canonicalURL="/project"
       keywords={[
         'rizqi amanan projects',
@@ -31,17 +31,14 @@ const portfolioData = createPortfolioStructuredData(siteURL)
         'react projects',
         'nextjs projects',
         'full stack projects',
-        'javascript projects',
-        'website desa',
-        'animal mart',
-        'sk8consign',
-        'stocksim pro',
+        'laravel projects',
+        'go projects',
+        'python projects',
+        'kontena ai',
+        'trading simulation',
       ]}
       structuredData={[pageData, portfolioData]}
     />
-    <!-- GSAP and ScrollTrigger CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
   </head>
   <body>
     <Navbar />

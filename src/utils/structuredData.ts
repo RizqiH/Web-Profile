@@ -57,9 +57,9 @@ export function createPersonStructuredData(siteURL: string): PersonStructuredDat
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Muhammad Rizqi Amanan Habibullah',
-    jobTitle: 'Mobile & Full Stack Developer',
+    jobTitle: 'Full Stack Web Developer',
     description:
-      'Computer Science student specializing in cross-platform mobile development (Flutter/Dart, Kotlin) and full-stack web development (Go, Python, Node.js, Next.js). Experienced in Clean Architecture, BLoC, MVVM, and AI/ML integration.',
+      'Full Stack Web Developer with 1.5+ years of hands-on contract experience building production-ready web applications using Laravel, PHP, Vue.js, Next.js, React, TypeScript, Node.js, Go, MySQL, and PostgreSQL. Experienced in Clean Architecture, MVC, RESTful APIs, Docker deployment, and payment gateway integration.',
     url: siteURL,
     image: new URL('/assets/images/fotoku.jpg', siteURL).href,
     sameAs: [
@@ -78,33 +78,28 @@ export function createPersonStructuredData(siteURL: string): PersonStructuredDat
       addressCountry: 'ID',
     },
     knowsAbout: [
-      'Mobile Development',
-      'Flutter',
-      'Dart',
-      'Kotlin',
-      'Android Native',
-      'Clean Architecture',
-      'BLoC Pattern',
-      'MVVM',
-      'Web Development',
       'Full Stack Development',
+      'Web Development',
+      'Laravel',
+      'PHP',
+      'Vue.js',
       'JavaScript',
       'TypeScript',
       'React',
+      'Next.js',
       'Node.js',
       'Express.js',
-      'Astro',
-      'Next.js',
-      'Vue.js',
-      'Svelte',
-      'Laravel',
-      'PHP',
       'Go',
       'Python',
+      'Flutter',
+      'Kotlin',
       'Docker',
       'Redis',
       'MySQL',
       'PostgreSQL',
+      'RESTful APIs',
+      'Clean Architecture',
+      'CI/CD',
     ],
   }
 }
@@ -113,9 +108,9 @@ export function createWebSiteStructuredData(siteURL: string): WebSiteStructuredD
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Rizqi Amanan - Mobile & Full Stack Developer Portfolio',
+    name: 'Rizqi Amanan - Full Stack Web Developer Portfolio',
     description:
-      'Portfolio website of Muhammad Rizqi Amanan Habibullah, a passionate mobile and full stack developer showcasing projects, skills, and experience.',
+      'Portfolio website of Muhammad Rizqi Amanan Habibullah, a Full Stack Web Developer with 1.5+ years of contract experience showcasing projects, skills, and experience.',
     url: siteURL,
     author: {
       '@type': 'Person',
@@ -140,7 +135,7 @@ export function createWebPageStructuredData(
     inLanguage: 'en-US',
     isPartOf: {
       '@type': 'WebSite',
-      name: 'Rizqi Amanan - Mobile & Full Stack Developer Portfolio',
+      name: 'Rizqi Amanan - Full Stack Web Developer Portfolio',
       url: siteURL,
     },
     about: {
@@ -155,11 +150,24 @@ export function createPortfolioStructuredData(siteURL: string) {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: 'Portfolio Projects',
-    description: 'Collection of mobile and web development projects by Rizqi Amanan',
+    description: 'Collection of web development projects by Rizqi Amanan',
     itemListElement: [
       {
         '@type': 'ListItem',
         position: 1,
+        item: {
+          '@type': 'SoftwareApplication',
+          name: 'Kontena AI',
+          description:
+            'AI Content Strategist platform with multi-LLM pipeline and Hybrid RAG engine using Next.js, FastAPI, and Supabase PostgreSQL.',
+          url: 'https://kontena.tech/',
+          applicationCategory: 'WebApplication',
+          operatingSystem: 'Web',
+        },
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
         item: {
           '@type': 'SoftwareApplication',
           name: 'Trading Simulation Platform',
@@ -172,7 +180,7 @@ export function createPortfolioStructuredData(siteURL: string) {
       },
       {
         '@type': 'ListItem',
-        position: 2,
+        position: 3,
         item: {
           '@type': 'SoftwareApplication',
           name: 'Face Verification Attendance System',
@@ -185,7 +193,7 @@ export function createPortfolioStructuredData(siteURL: string) {
       },
       {
         '@type': 'ListItem',
-        position: 3,
+        position: 4,
         item: {
           '@type': 'SoftwareApplication',
           name: 'Lab QR Scanner',
@@ -198,11 +206,11 @@ export function createPortfolioStructuredData(siteURL: string) {
       },
       {
         '@type': 'ListItem',
-        position: 4,
+        position: 5,
         item: {
           '@type': 'SoftwareApplication',
           name: 'Animal Mart',
-          description: 'Online store providing products for animals including livestock, birds, pets, and quality feed.',
+          description: 'E-commerce platform with Next.js 14, Express.js, and Firebase Firestore featuring order management and admin analytics.',
           url: 'https://animal-marts.vercel.app/',
           applicationCategory: 'WebApplication',
           operatingSystem: 'Web',
@@ -210,7 +218,7 @@ export function createPortfolioStructuredData(siteURL: string) {
       },
       {
         '@type': 'ListItem',
-        position: 5,
+        position: 6,
         item: {
           '@type': 'SoftwareApplication',
           name: 'AuctionHub Online Auction System',
@@ -222,10 +230,10 @@ export function createPortfolioStructuredData(siteURL: string) {
       },
       {
         '@type': 'ListItem',
-        position: 6,
+        position: 7,
         item: {
           '@type': 'SoftwareApplication',
-          name: 'Website Desa - Arus Bawah Creator',
+          name: 'Village Web Platform',
           description:
             'Digital platform supporting local creative communities with documentation and digital collaboration spaces.',
           url: 'https://arusbawahcreator.vercel.app/',
@@ -236,5 +244,3 @@ export function createPortfolioStructuredData(siteURL: string) {
     ],
   }
 }
-
-
