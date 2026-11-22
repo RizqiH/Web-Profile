@@ -1,63 +1,46 @@
 ---
 const links = [
-  { name: 'Home', href: 'home' },
-  { name: 'About', href: 'aboutme' },
-  { name: 'Projects', href: 'project' },
-  { name: 'Contact', href: 'Contact' },
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/aboutme' },
+  { name: 'Projects', href: '/project' },
+  { name: 'Contact', href: '/Contact' },
 ]
 ---
 
 <nav class="fixed top-4 inset-x-0 z-[100]">
-  <div class="max-w-2xl mx-auto px-8">
+  <div class="max-w-2xl mx-auto px-4 sm:px-8">
     <div class="w-full mx-auto">
       <div
-        class="relative flex items-center justify-between w-full p-3 mx-auto bg-white ring-1 uppercase ring-zinc-200 backdrop-blur-xl backdrop-filter rounded-xl md:rounded-full"
+        class="relative flex items-center justify-between w-full p-3 mx-auto bg-white/90 ring-1 uppercase ring-zinc-200 backdrop-blur-xl rounded-xl md:rounded-full"
       >
-        <!-- Left-aligned Logo -->
         <a
           href="/"
-          class="text-gray-600 hover:text-black gap-4 items-center tracking-tighter inline-flex font-bold text-xl"
-          style="transition: color 0.3s ease;"
+          class="text-gray-600 hover:text-black gap-4 items-center tracking-tighter inline-flex font-bold text-xl transition-colors duration-300"
         >
           Rizqi
         </a>
 
-        <!-- Mobile Menu Button (Hamburger on the Right) -->
-        <div class="md:hidden ml-auto">
-          <button id="menu-btn" class="text-gray-700 focus:outline-none">
-            <!-- Menu Icon (Hamburger / Close) -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              id="hamburger-icon"
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16m-7 6h7"></path>
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              id="close-icon"
-              class="h-6 w-6 hidden"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
+        <div class="md:hidden ml-auto flex items-center">
+          <button
+            id="menu-btn"
+            aria-label="Toggle navigation"
+            class="w-9 h-9 flex flex-col justify-center items-center gap-1.5 focus:outline-none p-1 rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            <span
+              id="bar-top"
+              class="w-5 h-0.5 bg-gray-800 rounded-full transition-all duration-300 ease-in-out origin-center"
+            ></span>
+            <span
+              id="bar-mid"
+              class="w-5 h-0.5 bg-gray-800 rounded-full transition-all duration-300 ease-in-out origin-center"
+            ></span>
+            <span
+              id="bar-bot"
+              class="w-5 h-0.5 bg-gray-800 rounded-full transition-all duration-300 ease-in-out origin-center"
+            ></span>
           </button>
         </div>
 
-        <!-- Navigation Links for Desktop -->
         <ul
           class="hidden md:space-y-0 md:ml-auto items-center md:inline-flex justify-center text-center md:text-left gap-3 md:block"
         >
@@ -66,7 +49,7 @@ const links = [
               <li>
                 <a
                   href={link.href}
-                  class="text-gray-500 hover:text-black transition-colors duration-300"
+                  class="text-gray-500 hover:text-black transition-colors duration-300 px-3 py-1 rounded-full hover:bg-gray-100/60"
                 >
                   {link.name}
                 </a>
@@ -76,18 +59,17 @@ const links = [
         </ul>
       </div>
 
-      <!-- Mobile Menu with Slide-Down Animation -->
       <div
         id="menu"
-        class="hidden md:hidden transform -translate-y-full transition-transform duration-300 ease-in-out bg-white shadow-lg mt-2 rounded-md"
+        class="md:hidden mt-2 overflow-hidden bg-white/95 backdrop-blur-xl rounded-2xl ring-1 ring-zinc-200 transition-all duration-300 ease-out max-h-0 opacity-0 -translate-y-2 pointer-events-none"
       >
-        <ul class="space-y-2 py-2 px-4 text-center">
+        <ul class="flex flex-col p-2 space-y-1">
           {
             links.map((link) => (
               <li>
                 <a
                   href={link.href}
-                  class="block text-gray-700 hover:text-blue-600 transition-colors duration-300 py-2 rounded-md"
+                  class="menu-link block py-2.5 px-4 rounded-xl text-center text-sm font-medium tracking-wide text-gray-700 hover:text-black hover:bg-gray-100/80 active:bg-gray-200 transition-all duration-200"
                 >
                   {link.name}
                 </a>
@@ -103,27 +85,42 @@ const links = [
 <script>
   const menuBtn = document.getElementById('menu-btn')!
   const menu = document.getElementById('menu')!
-  const hamburgerIcon = document.getElementById('hamburger-icon')!
-  const closeIcon = document.getElementById('close-icon')!
+  const barTop = document.getElementById('bar-top')!
+  const barMid = document.getElementById('bar-mid')!
+  const barBot = document.getElementById('bar-bot')!
+  const menuLinks = document.querySelectorAll('.menu-link')
   let menuOpen = false
 
-  menuBtn.addEventListener('click', () => {
-    menuOpen = !menuOpen
+  function toggleMenu(open?: boolean) {
+    menuOpen = typeof open === 'boolean' ? open : !menuOpen
 
-    // Toggle classes for slide-down and slide-up animation
     if (menuOpen) {
-      menu.classList.remove('hidden', '-translate-y-full')
-      menu.classList.add('translate-y-0')
-      hamburgerIcon.classList.add('hidden')
-      closeIcon.classList.remove('hidden')
+      menu.classList.remove('max-h-0', 'opacity-0', '-translate-y-2', 'pointer-events-none')
+      menu.classList.add('max-h-80', 'opacity-100', 'translate-y-0', 'pointer-events-auto')
+      barTop.classList.add('rotate-45', 'translate-y-2')
+      barMid.classList.add('opacity-0', 'scale-0')
+      barBot.classList.add('-rotate-45', '-translate-y-2')
     } else {
-      menu.classList.remove('translate-y-0')
-      menu.classList.add('-translate-y-full')
-      closeIcon.classList.add('hidden')
-      hamburgerIcon.classList.remove('hidden')
+      menu.classList.remove('max-h-80', 'opacity-100', 'translate-y-0', 'pointer-events-auto')
+      menu.classList.add('max-h-0', 'opacity-0', '-translate-y-2', 'pointer-events-none')
+      barTop.classList.remove('rotate-45', 'translate-y-2')
+      barMid.classList.remove('opacity-0', 'scale-0')
+      barBot.classList.remove('-rotate-45', '-translate-y-2')
+    }
+  }
 
-      // Hide the menu
-      menu.classList.add('hidden')
+  menuBtn.addEventListener('click', (e) => {
+    e.stopPropagation()
+    toggleMenu()
+  })
+
+  menuLinks.forEach((link) => {
+    link.addEventListener('click', () => toggleMenu(false))
+  })
+
+  document.addEventListener('click', (e) => {
+    if (menuOpen && !menu.contains(e.target as Node) && !menuBtn.contains(e.target as Node)) {
+      toggleMenu(false)
     }
   })
 </script>
