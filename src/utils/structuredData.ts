@@ -145,7 +145,7 @@ export function createWebPageStructuredData(
   }
 }
 
-export function createPortfolioStructuredData(siteURL: string) {
+export function createPortfolioStructuredData(_siteURL?: string) {
   return {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
